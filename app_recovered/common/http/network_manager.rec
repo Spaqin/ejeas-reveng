@@ -1,0 +1,90 @@
+// class id: 5113, size: 0x8, field offset: 0x8
+abstract class NetworkManager extends Object {
+
+  static _ getAdvertList(/* No info */) async {
+    // ** addr: 0x7daf90, size: 0x54
+    // Performs a GET request to '/api/advert/getAdvertList' using NetworkSendTool.
+  }
+
+  static _ logout(/* No info */) async {
+    // ** addr: 0x822fc8, size: 0x54
+    // Performs a POST request to '/api/user/logout'.
+  }
+
+  static _ sendfeedback(/* No info */) async {
+    // ** addr: 0x8242a0, size: 0x54
+    // Performs a POST request to '/api/v1/feedback/addOne' for user feedback.
+  }
+
+  static _ changeMobile(/* No info */) async {
+    // ** addr: 0x826120, size: 0x54
+    // Performs a POST request to '/api/user/changemobile'.
+  }
+
+  static _ send(/* No info */) async {
+    // ** addr: 0x82728c, size: 0x54
+    // Performs a POST request to '/api/sms/send' (likely for SMS verification).
+  }
+
+  static _ uploadFile(/* No info */) async {
+    // ** addr: 0x8ed44c, size: 0x48
+    // Uses NetworkSendTool::sendUpload for file uploads.
+  }
+
+  static _ getMenuList(/* No info */) async {
+    // ** addr: 0x91c138, size: 0x48
+    // Performs a POST request to fetch menu configuration.
+  }
+
+  static _ getUserInfo(/* No info */) async {
+    // ** addr: 0x92dfb8, size: 0x54
+    // Performs a GET request to '/api/user/getUserInfo'.
+  }
+
+  static _ checkNewVersion(/* No info */) async {
+    // ** addr: 0x933408, size: 0x54
+    // Checks for application updates by querying '/api/common/getLastVersionInfo'.
+  }
+
+  static _ sendVerificationCode(/* No info */) async {
+    // ** addr: 0x982464, size: 0x54
+    // Performs a POST request to '/api/ems/send' for OTP/SMS verification.
+  }
+
+  static _ changeEmail(/* No info */) async {
+    // ** addr: 0x984fac, size: 0x54
+    // Performs a POST request to '/api/user/changeemail'.
+  }
+
+  static _ resetPassword(/* No info */) async {
+    // ** addr: 0x986d84, size: 0x54
+    // Performs a POST request to '/api/user/resetpwd'.
+  }
+
+  static _ logoffUser(/* No info */) async {
+    // ** addr: 0x994850, size: 0x54
+    // Performs a POST request to '/api/user/logoff'.
+  }
+
+  static _ profile(/* No info */) async {
+    // ** addr: 0x9963e4, size: 0x54
+    // Performs a POST request to '/api/user/profile' for user profile data.
+  }
+
+  static _ getArticles(/* No info */) async {
+    // ** addr: 0xa4f8d8, size: 0x54
+    // Performs a GET request to '/index/article/getArticles'.
+  }
+
+  static _ getCountryCodeList(/* No info */) async {
+    // ** addr: 0xad71f8, size: 0x54
+    // Performs a GET request to '/api/area_country_code/getList'.
+  }
+
+  static _ thirdPartyLogin(/* No info */) async {
+    // ** addr: 0xb25920, size: 0x54
+    // Performs a POST request to '/api/user/third' for 3rd party auth.
+  }
+}
+
+// Summary: Centralized NetworkManager for the app's REST API interaction. It wraps various HTTP methods (GET, POST, Upload) specifically targeting structured endpoints for user management, content retrieval (articles, menus), and service interactions (SMS, Feedback).

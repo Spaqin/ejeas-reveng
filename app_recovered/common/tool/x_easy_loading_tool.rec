@@ -1,0 +1,24 @@
+// class id: 1048870, size: 0x8
+class XEasyLoadingTool {
+
+  static void showTitle(String title) {
+    // ** addr: 0x7adf20, size: 0x88
+    // Displays a localized title/toast message.
+    // 1. Retrieves the current language via LangManager.
+    // 2. Calls EasyLoading::showToast with the formatted title.
+  }
+
+  static void configLoading() {
+    // ** addr: 0xa69eb0, size: 0x84
+    // Configures the global EasyLoading instance.
+    // 1. Sets IndicatorType (e.g., progress/loading).
+    // 2. Sets Style (e.g., popup/toast).
+    // 3. Configures duration (45s) and mask delay (10s).
+    // 4. Disables masking (false).
+  }
+}
+
+// Summary: A utility wrapper around the 'flutter_easyloading' package. 
+// It provides simplified methods to show localized title toasts and 
+// configures global loading indicators (durations, styles, and masking behavior) 
+// used throughout the app to provide user feedback during async operations.

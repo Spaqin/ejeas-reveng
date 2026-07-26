@@ -1,0 +1,47 @@
+// From bluetooth_msg_tool.dart
+
+/**
+ * Represents the logic for processing incoming Bluetooth string data.
+ * Found at address 0x7f8fc8 (BleDataProcessor::processString)
+ */
+class BleDataProcessor {
+    static String processString(String input) {
+        // The assembly shows an anonymous closure is used within a .map() call.
+        // It iterates over the runes/characters of the input string.
+        
+        List<String> segments = input.runes.map((int rune) {
+            // If the character/rune is empty or null-like, return empty string.
+            if (inputIsEmpty(rune)) { 
+                return "";
+            }
+            // Otherwise, perform some mapping logic (likely hex conversion).
+            return convertRuneToHexPart(rune);
+        }).toList();
+
+        // Returns the final joined string via .join(".")
+        return segments.join(".");
+    }
+}
+
+/**
+ * Represents the logic for parsing raw byte arrays into structured packets.
+ * Found at address 0x7ea308 (BleMsgTool::rxMessage)
+ */
+class BleMsgTool {
+    async void rxMessage(byte[] rawBytes) {
+        // This function is triggered when a new Bluetooth packet arrives.
+        // It constructs a log message for the '[RX] [Data]:' format.
+
+        // 1. Convert raw bytes to a Hex String representation.
+        String hexData = XDataTool.hexStr(rawBytes);
+        
+        // 2. Format the log string: "[RX] [Data]: " + hexData
+        String logMessage = interpolate("[RX] [Data]: ", hexData);
+
+        // 3. Log the result using the Logger service.
+        LoggerService.ble(logMessage);
+
+        // 4. Delegate to the actual unpacking logic.
+        this.unpackData(rawBytes);
+    }
+}

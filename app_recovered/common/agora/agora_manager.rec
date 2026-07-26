@@ -1,0 +1,106 @@
+// class id: 5570, size: 0x80, field offset: 0x24
+class AgoraManager extends ChangeNotifier {
+
+  static late final AgoraManager _instance; // offset: 0xfb0
+  late final RtcEngine engine; // offset: 0x34
+
+  _ clearDataWithLogout(/* No info */) async {
+    // ** addr: 0x7ab244, size: 0x68
+    // Logic for clearing Agora-related session data upon user logout.
+    // 1. Sets channel name and other states to empty/reset.
+    // 2. Calls AgoraManager::leaveChannel() to terminate the current session.
+  }
+
+  _ leaveChannel(/* No info */) async {
+    // ** addr: 0x7ab2ac, size: 0x78
+    // Logic for leaving an active Agora RTC channel.
+    // 1. Logs '离开频道！！！' (Leaving Channel!!!).
+    // 2. Calls the underlying RtcEngineImpl::leaveChannel().
+  }
+
+  static AgoraManager _instance() {
+    // ** addr: 0x7add00, size: 0x40
+    // Singleton pattern accessor for AgoraManager.
+  }
+
+  _ AgoraManager._internal(/* No info */) {
+    // ** addr: 0x7add40, size: 0x128
+    // Constructor that initializes engine parameters (audio profile, volume, etc.).
+    // Sets up audio configurations like 'mix_with_others', 'enable_agc' (false), and 'enable_ns' (false).
+  }
+
+  _ leave5G(/* No info */) async {
+    // ** addr: 0x7f5834, size: 0x64
+    // Logic for leaving a 5G mesh-related channel.
+    // Calls AgoraManager::leaveChannel().
+  }
+
+  [closure] void <anonymous closure>(dynamic, RtcConnection, int, RemoteAudioState, RemoteAudioStateReason, int) {
+    // ** addr: 0xa7d73c, size: 0xdc
+    // Callback for remote audio state changes.
+    // Logs when the microphone is used by multiple applications or only one application.
+  }
+
+  _ setAudioStatus(/* No info */) {
+    // ** addr: 0xa7d818, size: 0x2ec
+    // Logic to mute/unmute audio streams based on incoming state changes.
+  }
+
+  _ joinChannel(/* No info */) async {
+    // ** addr: 0x86e3f4, size: 0x4d4
+    // High-level logic for joining an Agora channel.
+    // 1. Checks if the channel is already active or valid.
+    // 2. Calls RtcEngineImpl::joinChannel().
+    // 3. Triggers audio configuration (audio profile, volume) after joining.
+    // 4. Logs progress/errors using XLog.
+  }
+
+  _ setMicrophone(/* No and info */) async {
+    // ** addr: 0x86cb98, size: 0x7c
+    // Controls the local microphone mute state.
+  }
+
+  _ startMicMonitorTimer(/* No info */) {
+    // ** addr: 0xa7e670, size: 0xb0
+    // Logic for a periodic timer that monitors if the microphone is being used by other apps.
+  }
+
+  [closure] void <anonymous closure>(dynamic, Timer) async {
+    // ** addr: 0xa7e720, size: 0x228
+    // Callback for mic monitor timer to check 'isMicUsedByOthers' via platform channels.
+  }
+
+  _ changeAudioHFP(/* No info */) async {
+    // ** addr: 0xa7d258, size: 0x38
+    // Logic to switch audio routing (e.g., to Headset/Hands-Free Profile).
+  }
+
+  [closure] void <anonymous closure>(dynamic, ErrorCodeType, String) {
+    // ** addr: 0xa7e314, size: 0x74
+    // Callback for Agora error events. Logs errors with specific message and error code.
+  }
+
+  [closure] Future<void> <anonymous closure>(dynamic, RtcConnection, int) async {
+    // ** addr: 0xa7e388, size: 0x2e8
+    // Callback for remote user joining/leaving a channel.
+    // Logs connection stability and stats (using JSON serialization).
+  }
+
+  _ leaveSuccessClearData(/* No info */) async {
+    // ** addr: 0xa7dcb8, size: 0x10c
+    // Logic for clearing session data when leaving a channel successfully.
+  }
+
+  _ joinChannel(/* No info */) async {
+    // ** addr: 0x86e414, size: 0x70c
+    // Logic to join a specific group or collection of channels.
+    // Performs permission checks and service checks before attempting to join.
+  }
+
+  _ send5GStateToDevice(/* No info */) {
+    // ** addr: 0x85f3b0, size: 0xa4
+    // Sends the current 5G/Mesh connectivity state to a connected Bluetooth device via BleMsgTool.
+  }
+}
+
+// Summary: Core manager for Agora RTC services. Handles engine lifecycle (init, join, leave), audio stream management (mute/unmute), and monitoring audio routing changes or microphone usage by other applications. Integrates heavily with Bland, XLog, and BleMsgTool to broadcast device state updates via Bluetooth.

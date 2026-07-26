@@ -1,0 +1,55 @@
+// pseudo-code for bluetooth_queue_tool.dart assembly
+
+// Class: _MessageTask
+// Purpose: An internal data structure used to wrap a single Bluetooth command alongside its metadata and callback.
+// Fields:
+// - Command Data (Uint8List/Array)
+// - Task ID or identifier
+// - Response Callback (Function/Closure)
+
+// Class: BleQueueTool
+// Purpose: A thread-safe, singleton controller that manages an asynchronous FIFO queue of Bluetooth messages. 
+// It ensures that commands are sent one after another without overlapping, preventing protocol errors.
+
+// Function: sendMessageBack(dynamic message)
+// Logic: The primary entry point for injecting a new command into the transmission pipeline.
+// 1. Validates if the incoming 'message' is intended as an "onResponse" callback or a new outgoing command by checking type/context.
+// 2. If it's a new command (likely wrapped in a task):
+//    a. Wraps the raw message in a new '_MessageTask' object.
+//    b. Acquires a synchronization lock (_acquireLock) to prevent concurrent modification of the queue.
+//    c. Appends the newly created task to the end of the internal growable list (the queue).
+//    d. Checks if the queue was previously idle; if so, triggers '_sendNextMessage()' to start processing.
+//    e. Releases the synchronization lock (_releaseLock).
+// 3. Logs the transaction via 'XLog::d' (e.0.g., "add [hex_data]").
+
+// Function: _sendNextMessage()
+// Logic: The internal worker that dequeues and executes the next pending task in the queue.
+// 1. Checks if the queue is empty; if so, sets transmission state to 'idle' and exits.
+// 2. Acquires synchronization lock (_acquireLock) for thread-safe dequeueing.
+// 3. Removes the first task from the front of the list (FIFO).
+// 4. Marks the transmission state as 'busy/sending'.
+// 5. Validates if a Bluetooth connection is active via 'SupBleManager::isConnecting()'.
+//    a. If NOT connected: Logs "TX Error: Not connected" and triggers an error completion.
+//    b. If connected: Performs actual hardware transmission via 'BleManager::sendMessage()'.
+// 6. Handles the lifecycle of the response using a Completer/Timer approach.
+// 7. Releases the synchronization lock (_releaseLock).
+
+// Function: _sendBack(dynamic response)
+// Logic: Cleans up the task state and triggers the next transmission.
+// 1. Checks if the incoming data is specifically targeted at an "onResponse" handler.
+// 2. If it's a response to a pending command:
+//    a. Uses 'Completer::complete()' to resolve the asynchronous promise associated with that specific task.
+//    b. Resets the task-specific state.
+// 3. Triggers '_sendNextMessage()' to keep the pipeline flowing.
+
+// Function: _releaseLock()
+// Logic: Releases the internal mutex/lock used by the queue.
+// 1. Checks if there are still pending tasks in the queue.
+// 2. If the queue is now empty, completes any waiting synchronizers (e.s., signaling that the queue is idle).
+
+// Summary of file: bluetooth_queue_tool.dart
+// BleQueueTool provides a robust, asynchronous FIFO queue for Bluetooth communication. 
+// It prevents "command flooding" by ensuring only one message is active on the wire at any time.
+// By using a lock-protected list of '_MessageTask' objects, it allows different parts of the 
+// application to safely push commands and attach callbacks that will be executed 
+// sequentially as hardware responses arrive.

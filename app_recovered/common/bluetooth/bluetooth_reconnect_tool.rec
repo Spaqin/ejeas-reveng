@@ -1,0 +1,71 @@
+// pseudo-code for ble_reconnect_tool.dart assembly
+
+// Function: deleteDeviceInfo()
+// Logic: Cleans up cached device information from persistent storage.
+// 1. Accesses 'SharedPreferences' instance via 'getInstance()'.
+// 2. Removes the entry associated with key "device_info".
+// 3. Re-instantiates a new 'XDeviceModel' object to clear memory state.
+// 4. Logs successful deletion ("删除设备信息成功！发送通知") using 'XLog::ble'.
+// 5. Triggers 'notifyListeners()' to update any UI components observing device data.
+
+// Function: _internal() (Constructor)
+// Logic: Initializes the BleReconnectTool instance properties.
+// 1. Sets connection state/flag (field_23 = false).
+// 2. Initializes various Listeners/Lists for tracking tasks or events.
+// 3. Prepares internal buffers/lists as empty GrowableLists.
+
+// Function: saveReconnectDeviceInfo()
+// Logic: Persists current device information to persistent storage.
+// 1. Retrieves 'SharedPreferences' instance.
+// 2. Aggregates device metadata (ID and Name) into a Map.
+// 3. Encodes the Map into a JSON string using 'jsonEncode'.
+// 4. Stores the JSON string in 'SharedPreferences' under key "device_info".
+// 5. Also updates 'device_ble_type' as an integer in preferences.
+// 6. Logs success ("设备信息保存成功！发送通知") via 'XLog::ble'.
+// 7. Triggers 'notifyListeners()' for UI sync.
+
+// Function: reconnect(BluetoothDevice? device)
+// Logic: Manually triggers a reconnection attempt to a specifically provided device.
+// 1. Checks if an Agora/Voice session is active; if so, terminates it via 'AgoraManager::leave5G()'.
+// 2. Verifies if a reconnection process is already running using 'reConnectStop()' or checking status.
+// 3. If no active reconnect task exists and the device ID is valid:
+//    a. Logs start of attempt ("开始重连设备").
+//    b. Calls 'reconnectWithDeviceID()' to initiate the actual connection logic.
+// 4. Stops any existing reconnect timer/task if constraints are met.
+
+// Function: reconnectWithDeviceID(String deviceId)
+// Logic: Initiates a programmed reconnection sequence for a specific ID.
+// 1. Resets task-specific flags (field_33 = 0).
+// 2. Calls '_scheduleReconnect()' to enter the automated retry loop.
+
+// Function: _scheduleReconnect()
+// Logic: The core retry-loop engine. Uses a timer-based approach to attempt reconnection.
+// 1. Manages task counters (field_33 tracks reconnection attempts). Stops if threshold (999) is met.
+// 2. Checks status via 'SupBleManager::isConnecting()'. If already connecting, it halts the loop to prevent overlaps.
+// 3. Monitors system-wide Bluetooth state via 'BluetoothStateManager'; aborts/stops if Bluetooth adapter is disabled or unavailable.
+// 4. If continuing: triggers '_attemptReconnect()' and sets up a 'Timer' for the next interval.
+
+// Function: _attemptReconnect()
+// Logic: Performs a single, discrete reconnection attempt.
+// 1. Increments the internal retry counter (field_33).
+// 2. Logs current progress ("重连次数：[count]").
+// 3. Retrieves the target device instance from 'SupBleManager::deviceWithId()'.
+// 4. If a valid device is found:
+//    a. Attempts `connectDevice()` via 'SupBleManager'.
+//    b. If successful, stops the retry loop/timer.
+//    c. If failed, schedules the next attempt iteration using '_scheduleReconnect()'.
+
+// Function: scanAndReconnect()
+// Logic: A fallback mechanism that relies on finding a device through scanning when the specific ID is unknown or lost.
+// 1. Checks 'UserPreferences' for "spp_status_key" to determine status.
+// 2. Logs the current SPP status via 'XLog::ble'.
+// 3. Triggers `SupBleManager::scanDevices()`.
+// 4. Uses a timer-based delay before finalizing the scan.
+// 5. Handles scanning failures by logging error messages ("扫描重连失败: [error]").
+
+// Summary of file: ble_reconnect_tool.dart
+// BleReconnectTool is a robust, stateful utility class designed to manage the "retry and recover" lifecycle
+// for Bluetooth connections. It integrates with SharedPreferences for persistence (device caching), 
+// XLog for auditability, and SupBleManager/BluetoothStateManager for hardware-aware decision making. 
+// Its primary feature is an automated, incremental retry loop that attempts to reconnect to a specific 
+(or scanned) device while respecting the overall system Bluetooth availability and preventing redundant tasks.

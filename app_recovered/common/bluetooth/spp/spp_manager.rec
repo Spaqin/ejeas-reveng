@@ -1,0 +1,50 @@
+// pseudo-code for spp_manager.dart assembly
+
+// Class: SPPManager extends ChangeNotifier
+// Purpose: Controller for Serial Port Profile (SPP) Bluetooth communications, managing connection lifecycle and data streaming.
+// Fields:
+// - backBlock (dynamic): A callback/closure used to handle incoming native messages from the platform channel.
+
+// Function: disconnectDevice()
+// Logic: Gracefully terminates an active SPP session.
+// 1. Checks if a device is currently connected (`field_27 != null`).
+// 2. If connected, calls `MethodChannel::invokeMethod('disconnectDevice')` to trigger the native hardware disconnection.
+// 3. Clears the cached device identification in `BleReconnectTool`.
+// 4. Updates internal state to "disconnected" and notifies all listeners via `notifyListeners()`.
+// 5. Logs progress ("SPPManager-设备已断开") via `XLog::d`.
+
+// Function: sendData(Uint8List data)
+// Logic: Transmits raw bytes over the established SP-protocol link.
+// 1. Validates that a device is actively connected (`field_33 != null`).
+// 2. Prepares a payload map containing the "data" key and the byte buffer.
+// 3. Invokes `MethodChannel::invokeMethod('sendData')` to pass bytes to the native platform layer.
+// 4. Error handling: If the link is broken, logs "SPP TX Error: 设备未连接，无法发送数据" via `XLog::e`.
+
+// Function: getOtherDevice()
+// Logic: Queries the system for a list of previously paired/bonded SPP devices.
+// 1. Calls `MethodChannel::invokeMethod('getBondedDevices')` to fetch device lists from the OS.
+// 2. Performs JSON deserialization (`$SppDeviceModelFromJson`) on the returned string/map payload.
+// 3. Maps the results into a collection of `SppDeviceModel` objects, identifying if each is a "headphone" type.
+// 4. Returns the list to the UI layer for selection.
+
+// Function: startListening()
+// Logic: Subscribes to the continuous stream of incoming data from the Bluetooth hardware.
+// 1. Sets up an `EventChannel` listener for the platform's native broadcast stream.
+// 2. Uses a closure (`_sppNativeMessage`) to convert bridge-layer bytes into Flutter-standard `Uint8List`.
+// 3. Orchestrates error handling: if the stream encounters an error, it logs "Error receiving data" via `print`.
+
+// Function: _sppNativeMessage(dynamic event)
+// Logic: The bridge listener that processes raw platform events.
+// 1. Casts incoming native bytes to `List<int>`.
+// 2. Logs the received payload in hex format ("SPPManager-收到数据: <hex>") for debugging.
+// 3. Passes the stream data to the common `BleMsgTool::rxMessage` logic to unify protocol parsing (e.s., handling AA/BB framing) across both BLE and SPP modes.
+
+// Function: startScan() / stopScan()
+// Logic: Controls the discovery of new SPP hardware via platform-level scanning.
+// 1. `startScan`: Triggers `MethodChannel::invokeMethod('startScanning')` and clears previous scan results.
+// 2. `stopScan`: Calls the native method to cease active radio scanning.
+
+// Summary of file: spp_manager.dart
+// This class implements the SPP-specific transport layer for the application. Unlike the BLE implementation, which is characteristic-based, 
+// this manager uses a stream-oriented approach (EventChannel) to handle high-density data transfers typical of Serial Port Profiles.
+// It manages all asynchronous tasks related to device discovery, connection teardown, and continuous payload streaming.

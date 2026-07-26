@@ -1,0 +1,47 @@
+// pseudo-code for bluetooth_device_info.dart assembly
+
+// Class: FeatureSupport
+// Purpose: A structural model used to track the presence of specific hardware capabilities 
+// on a connected Bluetooth device, parsed directly from command payloads.
+// Fields (Boolean Flags):
+// - Bitmask-based properties for features like pairing status, audio path availability, 
+//   and various sensor/hardware flags.
+
+// Factory: FeatureSupport.fromCommand(dynamic command)
+// Logic: Parses a raw byte array or primitive value containing bit-packed feature flags.
+// 1. Extracts the payload from the incoming [command].
+// 2. Performs bitwise masking (e.g., & 0x80, & 0x40, & 0x20) against specific offsets in the byte stream.
+// 3. Maps each masked result to corresponding Boolean fields within a new FeatureSupport instance.
+// 4. Specifically handles features like:
+//    - Connection type/stability indicators.
+//    - Presence of audio/camera integration readiness.
+//    - Protocol-specific extensions retrieved from the device.
+
+// Class: BleDeviceModel 
+// Purpose: Represents a discovered Bluetooth Low Energy (BLE) device, managing connection state and metadata.
+// Fields (Reactive):
+// - Uses GetX (`Rx`) types for reactive property tracking (e.g., `RxInt`, `RxString`).
+// - Maintains properties like connection status, battery level, and signal strength.
+
+// Function: _clearData()
+// Logic: Resets the device model to a neutral "disconnected" or "uninitialized" state.
+// 1. Sets all reactive identity fields (name, address) to null/empty.
+// 
+// 2. Resets connection-related metrics (battery index, signal strength value, etc.) to default values.
+// 3. Notifies observers that the device state has been scrubbed.
+
+// Function: _BleDeviceModel() [Constructor]
+// Logic: Initializes a new BleDeviceModel with default "disconnected" values.
+// 1. Sets status flags (e.s., isPairing, isHeadphone) to 'false'.
+// 2. Initializes reactive integers (e.g., battery level = 0 or 255 for unknown).
+// 3. Sets the identifier/name string to empty ("").
+// 4. Prepares the model for incoming data updates from Scans/Connections.
+
+// Class: MusicSharerStatus & CameraStatus (Enums)
+// Purpose: High-level application state enums used to drive UI logic related to 
+// simultaneous'audio sharing or camera availability features during a connection.
+
+// Summary of file: bluetooth_device_info.dart
+// This module acts as the "Truth Source" for the device-side capabilities. 
+// It transforms raw, bitwise hardware responses into rich, reactive Dart objects 
+// that can be used by the UI and the core Bluetooth managers to drive user interaction.

@@ -1,0 +1,444 @@
+2026-07-20T09:55:41.559755 [Level.warning] [BLE] get ble type: BleType.androidSPP 
+2026-07-20T09:55:43.121134 [Level.warning] [Agora] Engine init error:LateInitializationError: Field 'engine' has not been initialized. 
+2026-07-20T09:55:43.830253 [Level.warning] [BLE] 开始重连设备 
+2026-07-20T09:55:43.830492 [Level.warning] [BLE] 重连设备：00:12:6F:1C:65:C3, X10 Phantom 
+2026-07-20T09:55:43.830567 [Level.warning] [BLE] 重连次数：1 
+2026-07-20T09:55:43.830754 [Level.warning] [BLE] Bluetooth State Changed: BluetoothAdapterState.on 
+2026-07-20T09:55:44.080875 [Level.warning] [BLE] 连接设备类型是：BleType.androidSPP, 00:12:6F:1C:65:C3 
+2026-07-20T09:55:44.694895 [Level.warning] [BLE] 已连接到设备: X10 Phantom 
+2026-07-20T09:55:44.695380 [Level.warning] [BLE] 保存设备成功：00:12:6F:1C:65:C3, X10 Phantom,45 
+2026-07-20T09:55:44.719464 [Level.warning] [BLE] [TX] [Data]: AA 02 00 00 AA 
+2026-07-20T09:55:44.779992 [Level.warning] [BLE] [RX] [Data]: BB 0C 08 80 28 B2 3D 01 A1 89 5A 00 BB 
+2026-07-20T09:55:44.780173 [Level.warning] [BLE] 收到的指令消息: [187, 12, 8, 128, 40, 178, 61, 1, 161, 137, 90, 0, 187] 
+2026-07-20T09:55:44.781296 [Level.warning] [BLE] [RX] [Data]: BB 46 01 01 00 BB BB F0 01 00 00 BB BB 1E 01 64 00 BB BB 47 01 01 00 BB 
+2026-07-20T09:55:44.781421 [Level.warning] [BLE] [RX] [Data] 解包数据: BB 46 01 01 00 BB 
+2026-07-20T09:55:44.781487 [Level.warning] [BLE] [RX] [Data] 解包数据: BB F0 01 00 00 BB 
+2026-07-20T09:55:44.781546 [Level.warning] [BLE] [RX] [Data] 解包数据: BB 1E 01 64 00 BB 
+2026-07-20T09:55:44.781599 [Level.warning] [BLE] [RX] [Data] 解包数据: BB 47 01 01 00 BB 
+2026-07-20T09:55:44.781699 [Level.warning] [BLE] 收到的指令消息: [187, 70, 1, 1, 0, 187] 
+2026-07-20T09:55:44.781780 [Level.warning] [BLE] 收到的指令消息: [187, 240, 1, 0, 0, 187] 
+2026-07-20T09:55:44.781894 [Level.warning] [BLE] 0xF0 查询到设备激活状态: true 
+2026-07-20T09:55:44.781967 [Level.warning] [BLE] 收到的指令消息: [187, 30, 1, 100, 0, 187] 
+2026-07-20T09:55:44.782051 [Level.warning] [BLE] 收到的指令消息: [187, 71, 1, 1, 0, 187] 
+2026-07-20T09:55:44.782097 [Level.warning] [BLE] _deviceModel.isCan47 ：false 
+2026-07-20T09:55:44.782828 [Level.warning] [BLE] [RX] [Data]: BB 0F 06 01 31 2E 39 2E 30 00 BB 
+2026-07-20T09:55:44.782950 [Level.warning] [BLE] 收到的指令消息: [187, 15, 6, 1, 49, 46, 57, 46, 48, 0, 187] 
+2026-07-20T09:55:44.783745 [Level.warning] [BLE] [RX] [Data]: BB 40 01 05 00 BB 
+2026-07-20T09:55:44.783870 [Level.warning] [BLE] 收到的指令消息: [187, 64, 1, 5, 0, 187] 
+2026-07-20T09:55:44.787906 [Level.warning] [BLE] [RX] [Data]: BB 42 01 03 00 BB BB 43 01 00 00 BB BB 44 01 00 00 BB BB 26 03 07 0A 06 00 BB BB 3C 01 01 00 BB BB 27 01 FF 00 BB BB 4A 01 FF 00 BB BB 4F 01 0B 00 BB BB 52 01 01 00 BB BB 55 11 00 00 A3 01 12 A0 70 02 01 3F 40 04 13 20 00 6E 49 00 BB BB 58 08 00 F5 53 05 E8 F4 AD 5E 00 BB 
+2026-07-20T09:55:44.788013 [Level.warning] [BLE] [RX] [Data] 解包数据: BB 42 01 03 00 BB 
+2026-07-20T09:55:44.788078 [Level.warning] [BLE] [RX] [Data] 解包数据: BB 43 01 00 00 BB 
+2026-07-20T09:55:44.788137 [Level.warning] [BLE] [RX] [Data] 解包数据: BB 44 01 00 00 BB 
+2026-07-20T09:55:44.788189 [Level.warning] [BLE] [RX] [Data] 解包数据: BB 26 03 07 0A 06 00 BB 
+2026-07-20T09:55:44.788235 [Level.warning] [BLE] [RX] [Data] 解包数据: BB 3C 01 01 00 BB 
+2026-07-20T09:55:44.788279 [Level.warning] [BLE] [RX] [Data] 解包数据: BB 27 01 FF 00 BB 
+2026-07-20T09:55:44.788332 [Level.warning] [BLE] [RX] [Data] 解包数据: BB 4A 01 FF 00 BB 
+2026-07-20T09:55:44.788400 [Level.warning] [BLE] [RX] [Data] 解包数据: BB 4F 01 0B 00 BB 
+2026-07-20T09:55:44.788458 [Level.warning] [BLE] [RX] [Data] 解包数据: BB 52 01 01 00 BB 
+2026-07-20T09:55:44.788602 [Level.warning] [BLE] [RX] [Data] 解包数据: BB 55 11 00 00 A3 01 12 A0 70 02 01 3F 40 04 13 20 00 6E 49 00 BB 
+2026-07-20T09:55:44.788683 [Level.warning] [BLE] [RX] [Data] 解包数据: BB 58 08 00 F5 53 05 E8 F4 AD 5E 00 BB 
+2026-07-20T09:55:44.788783 [Level.warning] [BLE] 收到的指令消息: [187, 66, 1, 3, 0, 187] 
+2026-07-20T09:55:44.788905 [Level.warning] [BLE] 收到的指令消息: [187, 67, 1, 0, 0, 187] 
+2026-07-20T09:55:44.788974 [Level.warning] [BLE] 收到的指令消息: [187, 68, 1, 0, 0, 187] 
+2026-07-20T09:55:44.789532 [Level.warning] [BLE] 收到的指令消息: [187, 38, 3, 7, 10, 6, 0, 187] 
+2026-07-20T09:55:44.789662 [Level.warning] [BLE] 收到的指令消息: [187, 60, 1, 1, 0, 187] 
+2026-07-20T09:55:44.789752 [Level.warning] [BLE] 收到的指令消息: [187, 39, 1, 255, 0, 187] 
+2026-07-20T09:55:44.789825 [Level.warning] [BLE] 收到的指令消息: [187, 74, 1, 255, 0, 187] 
+2026-07-20T09:55:44.790261 [Level.warning] [BLE] 收到的指令消息: [187, 79, 1, 11, 0, 187] 
+2026-07-20T09:55:44.790374 [Level.warning] [BLE] 收到的指令消息: [187, 82, 1, 1, 0, 187] 
+2026-07-20T09:55:44.790592 [Level.warning] [BLE] 收到的指令消息: [187, 85, 17, 0, 0, 163, 1, 18, 160, 112, 2, 1, 63, 64, 4, 19, 32, 0, 110, 73, 0, 187] 
+2026-07-20T09:55:44.790707 [Level.warning] [BLE] 收到的指令消息: [187, 88, 8, 0, 245, 83, 5, 232, 244, 173, 94, 0, 187] 
+2026-07-20T09:55:44.805794 [Level.warning] [BLE] [TX] [Data]: AA 3E 00 00 AA 
+2026-07-20T09:55:44.809217 [Level.warning] [BLE] [RX] [Data]: BB 02 10 01 A1 89 5A 00 12 6F 1C 65 C3 00 12 6F 1C 65 C3 00 BB 
+2026-07-20T09:55:44.809386 [Level.warning] [BLE] 收到的指令消息: [187, 2, 16, 1, 161, 137, 90, 0, 18, 111, 28, 101, 195, 0, 18, 111, 28, 101, 195, 0, 187] 
+2026-07-20T09:55:44.898807 [Level.warning] [BLE] [RX] [Data]: BB 3E 01 FF 00 BB 
+2026-07-20T09:55:44.899487 [Level.warning] [BLE] 收到的指令消息: [187, 62, 1, 255, 0, 187] 
+2026-07-20T09:55:45.198265 [Level.warning] [BLE] [TX] [Data]: AA 10 00 00 AA 
+2026-07-20T09:55:45.270931 [Level.warning] [BLE] [RX] [Data]: BB 10 02 FB 01 00 BB 
+2026-07-20T09:55:45.271125 [Level.warning] [BLE] 收到的指令消息: [187, 16, 2, 251, 1, 0, 187] 
+2026-07-20T09:55:45.271255 [Level.warning] [BLE] 打印一下是否是旧设备: false - 新设备 
+2026-07-20T09:55:45.271978 [Level.warning] [BLE] [RX] [Data]: BB 01 06 00 00 00 05 00 00 00 BB 
+2026-07-20T09:55:45.272132 [Level.warning] [BLE] 收到的指令消息: [187, 1, 6, 0, 0, 0, 5, 0, 0, 0, 187] 
+2026-07-20T09:55:45.869297 [Level.warning] [BLE] [RX] [Data]: BB 03 0A 00 00 00 00 00 00 00 00 00 00 00 BB 
+2026-07-20T09:55:45.870790 [Level.warning] [BLE] 收到的指令消息: [187, 3, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 187] 
+2026-07-20T09:55:45.952060 [Level.warning] [BLE] [RX] [Data]: BB 04 06 01 01 01 A1 89 5A 00 BB 
+2026-07-20T09:55:45.952229 [Level.warning] [BLE] 收到的指令消息: [187, 4, 6, 1, 1, 1, 161, 137, 90, 0, 187] 
+2026-07-20T09:55:47.171628 [Level.warning] [BLE] Bluetooth state: BluetoothScanStatus.on 
+2026-07-20T09:55:47.173529 [Level.warning] [BLE] [RX] [Data]: BB 1E 01 64 00 BB 
+2026-07-20T09:55:47.173665 [Level.warning] [BLE] 收到的指令消息: [187, 30, 1, 100, 0, 187] 
+2026-07-20T09:55:47.207079 [Level.warning] [BLE] [OneClickMeshPairingTool] 未查询到状态，1秒后进行第 1 次重试 
+2026-07-20T09:55:47.220477 [Level.warning] [BLE] [TX] [Data]: AA 0C 00 00 AA 
+2026-07-20T09:55:47.309345 [Level.warning] [BLE] [RX] [Data]: BB 0C 08 80 28 B2 3D 01 A1 89 5A 00 BB 
+2026-07-20T09:55:47.309507 [Level.warning] [BLE] 收到的指令消息: [187, 12, 8, 128, 40, 178, 61, 1, 161, 137, 90, 0, 187] 
+2026-07-20T09:55:47.311210 [Level.warning] [BLE] [TX] [Data]: AA 0E 00 00 AA 
+2026-07-20T09:55:47.320684 [Level.warning] [BLE] [RX] [Data]: BB 0E 0B 58 31 30 20 50 68 61 6E 74 6F 6D 00 BB 
+2026-07-20T09:55:47.320900 [Level.warning] [BLE] 收到的指令消息: [187, 14, 11, 88, 49, 48, 32, 80, 104, 97, 110, 116, 111, 109, 0, 187] 
+2026-07-20T09:55:47.322290 [Level.warning] [BLE] [TX] [Data]: AA 02 00 00 AA 
+2026-07-20T09:55:47.409607 [Level.warning] [BLE] [RX] [Data]: BB 02 10 01 A1 89 5A 00 12 6F 1C 65 C3 00 12 6F 1C 65 C3 00 BB 
+2026-07-20T09:55:47.409755 [Level.warning] [BLE] 收到的指令消息: [187, 2, 16, 1, 161, 137, 90, 0, 18, 111, 28, 101, 195, 0, 18, 111, 28, 101, 195, 0, 187] 
+2026-07-20T09:55:47.410876 [Level.warning] [BLE] [TX] [Data]: AA 00 00 00 AA 
+2026-07-20T09:55:47.506868 [Level.warning] [BLE] [RX] [Data]: BB 00 12 58 31 30 20 50 68 61 6E 74 6F 6D 42 2C 31 2E 39 2E 30 00 BB 
+2026-07-20T09:55:47.507020 [Level.warning] [BLE] 收到的指令消息: [187, 0, 18, 88, 49, 48, 32, 80, 104, 97, 110, 116, 111, 109, 66, 44, 49, 46, 57, 46, 48, 0, 187] 
+2026-07-20T09:55:47.508003 [Level.warning] [BLE] [TX] [Data]: AA 29 00 00 AA 
+2026-07-20T09:55:47.573201 [Level.warning] [BLE] [RX] [Data]: BB 29 01 FF 00 BB 
+2026-07-20T09:55:47.573358 [Level.warning] [BLE] 收到的指令消息: [187, 41, 1, 255, 0, 187] 
+2026-07-20T09:55:47.574242 [Level.warning] [BLE] [TX] [Data]: AA 3F 00 00 AA 
+2026-07-20T09:55:47.655840 [Level.warning] [BLE] [RX] [Data]: BB 3F 01 0A 00 BB 
+2026-07-20T09:55:47.656443 [Level.warning] [BLE] 收到的指令消息: [187, 63, 1, 10, 0, 187] 
+2026-07-20T09:55:47.659273 [Level.warning] [BLE] [TX] [Data]: AA 38 00 00 AA 
+2026-07-20T09:55:47.673854 [Level.warning] [BLE] [RX] [Data]: BB 38 01 06 00 BB 
+2026-07-20T09:55:47.674277 [Level.warning] [BLE] 收到的指令消息: [187, 56, 1, 6, 0, 187] 
+2026-07-20T09:55:47.682336 [Level.warning] [BLE] [TX] [Data]: AA 54 00 00 AA 
+2026-07-20T09:55:47.763162 [Level.warning] [BLE] [RX] [Data]: BB 54 01 05 00 BB 
+2026-07-20T09:55:47.763336 [Level.warning] [BLE] 收到的指令消息: [187, 84, 1, 5, 0, 187] 
+2026-07-20T09:55:47.764525 [Level.warning] [BLE] [TX] [Data]: AA 61 00 00 AA 
+2026-07-20T09:55:47.829461 [Level.warning] [BLE] [RX] [Data]: BB 61 01 00 00 BB 
+2026-07-20T09:55:47.829983 [Level.warning] [BLE] 收到的指令消息: [187, 97, 1, 0, 0, 187] 
+2026-07-20T09:55:47.832720 [Level.warning] [BLE] [TX] [Data]: AA 69 01 04 00 AA 
+2026-07-20T09:55:48.081508 [Level.warning] [BLE] [RX] [Data]: BB 69 05 04 00 00 00 13 00 BB 
+2026-07-20T09:55:48.081658 [Level.warning] [BLE] 收到的指令消息: [187, 105, 5, 4, 0, 0, 0, 19, 0, 187] 
+2026-07-20T09:55:48.082951 [Level.warning] [BLE] [TX] [Data]: AA 59 00 00 AA 
+2026-07-20T09:55:48.188038 [Level.warning] [BLE] [RX] [Data]: BB 59 01 70 00 BB 
+2026-07-20T09:55:48.188189 [Level.warning] [BLE] 收到的指令消息: [187, 89, 1, 112, 0, 187] 
+2026-07-20T09:55:48.188972 [Level.warning] [BLE] [TX] [Data]: AA 60 00 00 AA 
+2026-07-20T09:55:48.208595 [Level.warning] [BLE] 重连成功！ 
+2026-07-20T09:55:48.279211 [Level.warning] [BLE] [RX] [Data]: BB 60 01 01 00 BB 
+2026-07-20T09:55:48.279373 [Level.warning] [BLE] 收到的指令消息: [187, 96, 1, 1, 0, 187] 
+2026-07-20T09:55:48.280772 [Level.warning] [BLE] [TX] [Data]: AA 69 01 01 00 AA 
+2026-07-20T09:55:48.358767 [Level.warning] [BLE] [RX] [Data]: BB 69 07 01 01 01 00 2D 01 01 00 BB 
+2026-07-20T09:55:48.358951 [Level.warning] [BLE] 收到的指令消息: [187, 105, 7, 1, 1, 1, 0, 45, 1, 1, 0, 187] 
+2026-07-20T09:55:48.359848 [Level.warning] [BLE] [TX] [Data]: AA 39 00 00 AA 
+2026-07-20T09:55:48.424125 [Level.warning] [BLE] [RX] [Data]: BB 39 01 07 00 BB 
+2026-07-20T09:55:48.424586 [Level.warning] [BLE] 收到的指令消息: [187, 57, 1, 7, 0, 187] 
+2026-07-20T09:55:48.429741 [Level.warning] [BLE] [TX] [Data]: AA 3A 00 00 AA 
+2026-07-20T09:55:48.438804 [Level.warning] [BLE] [RX] [Data]: BB 3A 01 0A 00 BB 
+2026-07-20T09:55:48.439220 [Level.warning] [BLE] 收到的指令消息: [187, 58, 1, 10, 0, 187] 
+2026-07-20T09:55:48.443782 [Level.warning] [BLE] [TX] [Data]: AA 65 00 00 AA 
+2026-07-20T09:55:48.515869 [Level.warning] [BLE] [RX] [Data]: BB 65 01 FF 00 BB 
+2026-07-20T09:55:48.516233 [Level.warning] [BLE] 收到的指令消息: [187, 101, 1, 255, 0, 187] 
+2026-07-20T09:55:48.518923 [Level.warning] [BLE] [TX] [Data]: AA 6A 00 00 AA 
+2026-07-20T09:55:48.530764 [Level.warning] [BLE] [RX] [Data]: BB 6A 01 00 00 BB 
+2026-07-20T09:55:48.530986 [Level.warning] [BLE] 收到的指令消息: [187, 106, 1, 0, 0, 187] 
+2026-07-20T09:55:48.531973 [Level.warning] [BLE] [TX] [Data]: AA 24 01 FF 00 AA 
+2026-07-20T09:55:48.594481 [Level.warning] [BLE] [RX] [Data]: BB 24 00 00 BB 
+2026-07-20T09:55:48.594861 [Level.warning] [BLE] 收到的指令消息: [187, 36, 0, 0, 187] 
+2026-07-20T09:55:48.596724 [Level.warning] [BLE] [TX] [Data]: AA 0F 01 02 00 AA 
+2026-07-20T09:55:48.697934 [Level.warning] [BLE] [RX] [Data]: BB 0F 06 02 33 2E 3C 2E 55 00 BB 
+2026-07-20T09:55:48.698705 [Level.warning] [BLE] 收到的指令消息: [187, 15, 6, 2, 51, 46, 60, 46, 85, 0, 187] 
+2026-07-20T09:55:48.708167 [Level.warning] [BLE] [TX] [Data]: AA F3 00 00 AA 
+2026-07-20T09:55:48.794870 [Level.warning] [BLE] [RX] [Data]: BB F3 0C 58 31 30 20 50 68 61 6E 74 6F 6D 42 00 BB 
+2026-07-20T09:55:48.795312 [Level.warning] [BLE] 收到的指令消息: [187, 243, 12, 88, 49, 48, 32, 80, 104, 97, 110, 116, 111, 109, 66, 0, 187] 
+2026-07-20T09:55:49.795266 [Level.warning] [BLE] [TX] [Data]: AA 1D 02 05 0B 00 AA 
+2026-07-20T09:55:49.890133 [Level.warning] [BLE] [RX] [Data]: BB 1D 00 00 BB 
+2026-07-20T09:55:49.890570 [Level.warning] [BLE] 收到的指令消息: [187, 29, 0, 0, 187] 
+2026-07-20T09:55:52.394995 [Level.warning] [BLE] [RX] [Data]: BB 01 06 00 00 00 05 00 00 00 BB 
+2026-07-20T09:55:52.395165 [Level.warning] [BLE] 收到的指令消息: [187, 1, 6, 0, 0, 0, 5, 0, 0, 0, 187] 
+2026-07-20T09:56:02.140144 [Level.warning] [BLE] 连接设备后，把设备信息传给后台 传惨 ={sn: 8028B23D01A1895A, active_status: 1, model_code: 45, version: 1.9.0, electricity: 100, config: {bluetooth: 00:12:6F:1C:65:C3}, iso_code: , lat: , lon: } 
+2026-07-20T09:56:02.684896 [Level.warning] [BLE] 连接设备后，把设备信息传给后台 ={code: 1, msg: Operation successful!, time: 1784512562, data: null} 
+2026-07-20T09:56:16.790549 [Level.warning] [BLE] [RX] [Data]: BB 1E 01 64 00 BB 
+2026-07-20T09:56:16.791124 [Level.warning] [BLE] 收到的指令消息: [187, 30, 1, 100, 0, 187] 
+2026-07-20T09:56:17.777334 [Level.warning] [BLE] [RX] [Data]: BB 01 06 00 00 00 05 00 00 00 BB 
+2026-07-20T09:56:17.777901 [Level.warning] [BLE] 收到的指令消息: [187, 1, 6, 0, 0, 0, 5, 0, 0, 0, 187] 
+2026-07-20T09:56:26.980711 [Level.warning] [BLE] get ble type: BleType.androidSPP 
+2026-07-20T09:56:27.315265 [Level.warning] [Agora] Engine init error:LateInitializationError: Field 'engine' has not been initialized. 
+2026-07-20T09:56:27.730602 [Level.warning] [BLE] 开始重连设备 
+2026-07-20T09:56:27.732085 [Level.warning] [BLE] 重连设备：00:12:6F:1C:65:C3, X10 Phantom 
+2026-07-20T09:56:27.732288 [Level.warning] [BLE] 重连次数：1 
+2026-07-20T09:56:27.732691 [Level.warning] [BLE] Bluetooth State Changed: BluetoothAdapterState.on 
+2026-07-20T09:56:27.828701 [Level.warning] [BLE] 连接设备类型是：BleType.androidSPP, 00:12:6F:1C:65:C3 
+2026-07-20T09:56:28.501871 [Level.warning] [BLE] 已连接到设备: X10 Phantom 
+2026-07-20T09:56:28.504279 [Level.warning] [BLE] 保存设备成功：00:12:6F:1C:65:C3, X10 Phantom,45 
+2026-07-20T09:56:28.535415 [Level.warning] [BLE] [TX] [Data]: AA 02 00 00 AA 
+2026-07-20T09:56:28.569718 [Level.warning] [BLE] [RX] [Data]: BB 0C 08 80 28 B2 3D 01 A1 89 5A 00 BB BB 46 01 01 00 BB 
+2026-07-20T09:56:28.569859 [Level.warning] [BLE] [RX] [Data] 解包数据: BB 0C 08 80 28 B2 3D 01 A1 89 5A 00 BB 
+2026-07-20T09:56:28.569942 [Level.warning] [BLE] [RX] [Data] 解包数据: BB 46 01 01 00 BB 
+2026-07-20T09:56:28.570065 [Level.warning] [BLE] 收到的指令消息: [187, 12, 8, 128, 40, 178, 61, 1, 161, 137, 90, 0, 187] 
+2026-07-20T09:56:28.570210 [Level.warning] [BLE] 收到的指令消息: [187, 70, 1, 1, 0, 187] 
+2026-07-20T09:56:28.575187 [Level.warning] [BLE] [RX] [Data]: BB F0 01 00 00 BB 
+2026-07-20T09:56:28.575356 [Level.warning] [BLE] 收到的指令消息: [187, 240, 1, 0, 0, 187] 
+2026-07-20T09:56:28.575462 [Level.warning] [BLE] 0xF0 查询到设备激活状态: true 
+2026-07-20T09:56:28.577072 [Level.warning] [BLE] [RX] [Data]: BB 1E 01 64 00 BB 
+2026-07-20T09:56:28.577225 [Level.warning] [BLE] 收到的指令消息: [187, 30, 1, 100, 0, 187] 
+2026-07-20T09:56:28.578480 [Level.warning] [BLE] [RX] [Data]: BB 47 01 01 00 BB 
+2026-07-20T09:56:28.578629 [Level.warning] [BLE] 收到的指令消息: [187, 71, 1, 1, 0, 187] 
+2026-07-20T09:56:28.578723 [Level.warning] [BLE] _deviceModel.isCan47 ：false 
+2026-07-20T09:56:28.580169 [Level.warning] [BLE] [RX] [Data]: BB 0F 06 01 31 2E 39 2E 30 00 BB 
+2026-07-20T09:56:28.580332 [Level.warning] [BLE] 收到的指令消息: [187, 15, 6, 1, 49, 46, 57, 46, 48, 0, 187] 
+2026-07-20T09:56:28.581116 [Level.warning] [BLE] [RX] [Data]: BB 40 01 05 00 BB 
+2026-07-20T09:56:28.581264 [Level.warning] [BLE] 收到的指令消息: [187, 64, 1, 5, 0, 187] 
+2026-07-20T09:56:28.582878 [Level.warning] [BLE] [RX] [Data]: BB 42 01 03 00 BB BB 43 01 00 00 BB BB 44 01 00 00 BB BB 26 03 07 0A 06 00 BB BB 3C 01 01 00 BB BB 27 01 FF 00 BB BB 4A 01 FF 00 BB BB 4F 01 0B 00 BB BB 52 01 01 00 BB BB 55 11 00 00 A3 01 12 A0 70 02 01 3F 40 04 13 20 00 6E 49 00 BB BB 58 08 6C 3B D3 C7 89 DE C2 81 00 BB 
+2026-07-20T09:56:28.583014 [Level.warning] [BLE] [RX] [Data] 解包数据: BB 42 01 03 00 BB 
+2026-07-20T09:56:28.583088 [Level.warning] [BLE] [RX] [Data] 解包数据: BB 43 01 00 00 BB 
+2026-07-20T09:56:28.583159 [Level.warning] [BLE] [RX] [Data] 解包数据: BB 44 01 00 00 BB 
+2026-07-20T09:56:28.583223 [Level.warning] [BLE] [RX] [Data] 解包数据: BB 26 03 07 0A 06 00 BB 
+2026-07-20T09:56:28.583281 [Level.warning] [BLE] [RX] [Data] 解包数据: BB 3C 01 01 00 BB 
+2026-07-20T09:56:28.583338 [Level.warning] [BLE] [RX] [Data] 解包数据: BB 27 01 FF 00 BB 
+2026-07-20T09:56:28.583405 [Level.warning] [BLE] [RX] [Data] 解包数据: BB 4A 01 FF 00 BB 
+2026-07-20T09:56:28.583476 [Level.warning] [BLE] [RX] [Data] 解包数据: BB 4F 01 0B 00 BB 
+2026-07-20T09:56:28.583542 [Level.warning] [BLE] [RX] [Data] 解包数据: BB 52 01 01 00 BB 
+2026-07-20T09:56:28.583613 [Level.warning] [BLE] [RX] [Data] 解包数据: BB 55 11 00 00 A3 01 12 A0 70 02 01 3F 40 04 13 20 00 6E 49 00 BB 
+2026-07-20T09:56:28.583677 [Level.warning] [BLE] [RX] [Data] 解包数据: BB 58 08 6C 3B D3 C7 89 DE C2 81 00 BB 
+2026-07-20T09:56:28.583789 [Level.warning] [BLE] 收到的指令消息: [187, 66, 1, 3, 0, 187] 
+2026-07-20T09:56:28.583925 [Level.warning] [BLE] 收到的指令消息: [187, 67, 1, 0, 0, 187] 
+2026-07-20T09:56:28.584019 [Level.warning] [BLE] 收到的指令消息: [187, 68, 1, 0, 0, 187] 
+2026-07-20T09:56:28.584135 [Level.warning] [BLE] 收到的指令消息: [187, 38, 3, 7, 10, 6, 0, 187] 
+2026-07-20T09:56:28.584277 [Level.warning] [BLE] 收到的指令消息: [187, 60, 1, 1, 0, 187] 
+2026-07-20T09:56:28.584363 [Level.warning] [BLE] 收到的指令消息: [187, 39, 1, 255, 0, 187] 
+2026-07-20T09:56:28.584442 [Level.warning] [BLE] 收到的指令消息: [187, 74, 1, 255, 0, 187] 
+2026-07-20T09:56:28.584914 [Level.warning] [BLE] 收到的指令消息: [187, 79, 1, 11, 0, 187] 
+2026-07-20T09:56:28.585042 [Level.warning] [BLE] 收到的指令消息: [187, 82, 1, 1, 0, 187] 
+2026-07-20T09:56:28.585150 [Level.warning] [BLE] 收到的指令消息: [187, 85, 17, 0, 0, 163, 1, 18, 160, 112, 2, 1, 63, 64, 4, 19, 32, 0, 110, 73, 0, 187] 
+2026-07-20T09:56:28.585267 [Level.warning] [BLE] 收到的指令消息: [187, 88, 8, 108, 59, 211, 199, 137, 222, 194, 129, 0, 187] 
+2026-07-20T09:56:28.611654 [Level.warning] [BLE] [TX] [Data]: AA 3E 00 00 AA 
+2026-07-20T09:56:28.613337 [Level.warning] [BLE] [RX] [Data]: BB 02 10 01 A1 89 5A 00 12 6F 1C 65 C3 00 12 6F 1C 65 C3 00 BB 
+2026-07-20T09:56:28.613505 [Level.warning] [BLE] 收到的指令消息: [187, 2, 16, 1, 161, 137, 90, 0, 18, 111, 28, 101, 195, 0, 18, 111, 28, 101, 195, 0, 187] 
+2026-07-20T09:56:28.685815 [Level.warning] [BLE] [RX] [Data]: BB 3E 01 FF 00 BB 
+2026-07-20T09:56:28.686635 [Level.warning] [BLE] 收到的指令消息: [187, 62, 1, 255, 0, 187] 
+2026-07-20T09:56:29.034583 [Level.warning] [BLE] [TX] [Data]: AA 10 00 00 AA 
+2026-07-20T09:56:29.043263 [Level.warning] [BLE] [RX] [Data]: BB 01 06 00 00 00 05 00 00 00 BB 
+2026-07-20T09:56:29.043616 [Level.warning] [BLE] 收到的指令消息: [187, 1, 6, 0, 0, 0, 5, 0, 0, 0, 187] 
+2026-07-20T09:56:29.043844 [Level.warning] [BLE] 打印一下是否是旧设备: false - 新设备 
+2026-07-20T09:56:29.045350 [Level.warning] [BLE] [RX] [Data]: BB 10 02 FB 01 00 BB 
+2026-07-20T09:56:29.045644 [Level.warning] [BLE] 收到的指令消息: [187, 16, 2, 251, 1, 0, 187] 
+2026-07-20T09:56:29.532437 [Level.warning] [BLE] [RX] [Data]: BB 03 0A 00 00 00 00 00 00 00 00 00 00 00 BB 
+2026-07-20T09:56:29.534313 [Level.warning] [BLE] 收到的指令消息: [187, 3, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 187] 
+2026-07-20T09:56:29.535922 [Level.warning] [BLE] [RX] [Data]: BB 04 06 01 01 01 A1 89 5A 00 BB 
+2026-07-20T09:56:29.536229 [Level.warning] [BLE] 收到的指令消息: [187, 4, 6, 1, 1, 1, 161, 137, 90, 0, 187] 
+2026-07-20T09:56:29.576093 [Level.warning] [BLE] Bluetooth state: BluetoothScanStatus.on 
+2026-07-20T09:56:30.546307 [Level.warning] [BLE] [RX] [Data]: BB 1E 01 64 00 BB 
+2026-07-20T09:56:30.547195 [Level.warning] [BLE] 收到的指令消息: [187, 30, 1, 100, 0, 187] 
+2026-07-20T09:56:31.010326 [Level.warning] [BLE] [OneClickMeshPairingTool] 未查询到状态，1秒后进行第 1 次重试 
+2026-07-20T09:56:31.011621 [Level.warning] [BLE] [TX] [Data]: AA 0C 00 00 AA 
+2026-07-20T09:56:31.109579 [Level.warning] [BLE] [RX] [Data]: BB 0C 08 80 28 B2 3D 01 A1 89 5A 00 BB 
+2026-07-20T09:56:31.110311 [Level.warning] [BLE] 收到的指令消息: [187, 12, 8, 128, 40, 178, 61, 1, 161, 137, 90, 0, 187] 
+2026-07-20T09:56:31.113043 [Level.warning] [BLE] [TX] [Data]: AA 0E 00 00 AA 
+2026-07-20T09:56:31.196925 [Level.warning] [BLE] [RX] [Data]: BB 0E 0B 58 31 30 20 50 68 61 6E 74 6F 6D 00 BB 
+2026-07-20T09:56:31.197404 [Level.warning] [BLE] 收到的指令消息: [187, 14, 11, 88, 49, 48, 32, 80, 104, 97, 110, 116, 111, 109, 0, 187] 
+2026-07-20T09:56:31.201800 [Level.warning] [BLE] [TX] [Data]: AA 02 00 00 AA 
+2026-07-20T09:56:31.304874 [Level.warning] [BLE] [RX] [Data]: BB 02 10 01 A1 89 5A 00 12 6F 1C 65 C3 00 12 6F 1C 65 C3 00 BB 
+2026-07-20T09:56:31.305749 [Level.warning] [BLE] 收到的指令消息: [187, 2, 16, 1, 161, 137, 90, 0, 18, 111, 28, 101, 195, 0, 18, 111, 28, 101, 195, 0, 187] 
+2026-07-20T09:56:31.309694 [Level.warning] [BLE] [TX] [Data]: AA 00 00 00 AA 
+2026-07-20T09:56:31.372400 [Level.warning] [BLE] [RX] [Data]: BB 00 12 58 31 30 20 50 68 61 6E 74 6F 6D 42 2C 31 2E 39 2E 30 00 BB 
+2026-07-20T09:56:31.372782 [Level.warning] [BLE] 收到的指令消息: [187, 0, 18, 88, 49, 48, 32, 80, 104, 97, 110, 116, 111, 109, 66, 44, 49, 46, 57, 46, 48, 0, 187] 
+2026-07-20T09:56:31.375844 [Level.warning] [BLE] [TX] [Data]: AA 29 00 00 AA 
+2026-07-20T09:56:31.386818 [Level.warning] [BLE] [RX] [Data]: BB 29 01 FF 00 BB 
+2026-07-20T09:56:31.387307 [Level.warning] [BLE] 收到的指令消息: [187, 41, 1, 255, 0, 187] 
+2026-07-20T09:56:31.391106 [Level.warning] [BLE] [TX] [Data]: AA 3F 00 00 AA 
+2026-07-20T09:56:31.533991 [Level.warning] [BLE] [RX] [Data]: BB 3F 01 0A 00 BB 
+2026-07-20T09:56:31.534360 [Level.warning] [BLE] 收到的指令消息: [187, 63, 1, 10, 0, 187] 
+2026-07-20T09:56:31.537650 [Level.warning] [BLE] [TX] [Data]: AA 38 00 00 AA 
+2026-07-20T09:56:31.551408 [Level.warning] [BLE] [RX] [Data]: BB 38 01 06 00 BB 
+2026-07-20T09:56:31.551689 [Level.warning] [BLE] 收到的指令消息: [187, 56, 1, 6, 0, 187] 
+2026-07-20T09:56:31.555251 [Level.warning] [BLE] [TX] [Data]: AA 54 00 00 AA 
+2026-07-20T09:56:31.635615 [Level.warning] [BLE] [RX] [Data]: BB 54 01 05 00 BB 
+2026-07-20T09:56:31.636064 [Level.warning] [BLE] 收到的指令消息: [187, 84, 1, 5, 0, 187] 
+2026-07-20T09:56:31.640237 [Level.warning] [BLE] [TX] [Data]: AA 61 00 00 AA 
+2026-07-20T09:56:31.728832 [Level.warning] [BLE] [RX] [Data]: BB 61 01 00 00 BB 
+2026-07-20T09:56:31.729148 [Level.warning] [BLE] 收到的指令消息: [187, 97, 1, 0, 0, 187] 
+2026-07-20T09:56:31.736455 [Level.warning] [BLE] [TX] [Data]: AA 69 01 04 00 AA 
+2026-07-20T09:56:31.895621 [Level.warning] [BLE] [RX] [Data]: BB 69 05 04 00 00 00 13 00 BB 
+2026-07-20T09:56:31.895997 [Level.warning] [BLE] 收到的指令消息: [187, 105, 5, 4, 0, 0, 0, 19, 0, 187] 
+2026-07-20T09:56:31.898360 [Level.warning] [BLE] [TX] [Data]: AA 59 00 00 AA 
+2026-07-20T09:56:31.971303 [Level.warning] [BLE] [RX] [Data]: BB 59 01 70 00 BB 
+2026-07-20T09:56:31.971903 [Level.warning] [BLE] 收到的指令消息: [187, 89, 1, 112, 0, 187] 
+2026-07-20T09:56:31.974756 [Level.warning] [BLE] [TX] [Data]: AA 60 00 00 AA 
+2026-07-20T09:56:31.986134 [Level.warning] [BLE] [RX] [Data]: BB 60 01 01 00 BB 
+2026-07-20T09:56:31.986690 [Level.warning] [BLE] 收到的指令消息: [187, 96, 1, 1, 0, 187] 
+2026-07-20T09:56:31.988960 [Level.warning] [BLE] [TX] [Data]: AA 69 01 01 00 AA 
+2026-07-20T09:56:32.011436 [Level.warning] [BLE] 重连成功！ 
+2026-07-20T09:56:32.267904 [Level.warning] [BLE] [RX] [Data]: BB 69 07 01 01 01 00 2D 01 01 00 BB 
+2026-07-20T09:56:32.268191 [Level.warning] [BLE] 收到的指令消息: [187, 105, 7, 1, 1, 1, 0, 45, 1, 1, 0, 187] 
+2026-07-20T09:56:32.269261 [Level.warning] [BLE] [TX] [Data]: AA 39 00 00 AA 
+2026-07-20T09:56:32.315211 [Level.warning] [BLE] [RX] [Data]: BB 39 01 07 00 BB 
+2026-07-20T09:56:32.316242 [Level.warning] [BLE] 收到的指令消息: [187, 57, 1, 7, 0, 187] 
+2026-07-20T09:56:32.317380 [Level.warning] [BLE] [TX] [Data]: AA 3A 00 00 AA 
+2026-07-20T09:56:32.327808 [Level.warning] [BLE] [RX] [Data]: BB 3A 01 0A 00 BB 
+2026-07-20T09:56:32.327958 [Level.warning] [BLE] 收到的指令消息: [187, 58, 1, 10, 0, 187] 
+2026-07-20T09:56:32.328970 [Level.warning] [BLE] [TX] [Data]: AA 65 00 00 AA 
+2026-07-20T09:56:32.396682 [Level.warning] [BLE] [RX] [Data]: BB 65 01 FF 00 BB 
+2026-07-20T09:56:32.397173 [Level.warning] [BLE] 收到的指令消息: [187, 101, 1, 255, 0, 187] 
+2026-07-20T09:56:32.400516 [Level.warning] [BLE] [TX] [Data]: AA 6A 00 00 AA 
+2026-07-20T09:56:32.575116 [Level.warning] [BLE] [RX] [Data]: BB 6A 01 00 00 BB 
+2026-07-20T09:56:32.575695 [Level.warning] [BLE] 收到的指令消息: [187, 106, 1, 0, 0, 187] 
+2026-07-20T09:56:32.578416 [Level.warning] [BLE] [TX] [Data]: AA 24 01 FF 00 AA 
+2026-07-20T09:56:32.664335 [Level.warning] [BLE] [RX] [Data]: BB 24 00 00 BB 
+2026-07-20T09:56:32.664849 [Level.warning] [BLE] 收到的指令消息: [187, 36, 0, 0, 187] 
+2026-07-20T09:56:32.667056 [Level.warning] [BLE] [TX] [Data]: AA 0F 01 02 00 AA 
+2026-07-20T09:56:32.746413 [Level.warning] [BLE] [RX] [Data]: BB 0F 06 02 33 2E 3C 2E 55 00 BB 
+2026-07-20T09:56:32.746802 [Level.warning] [BLE] 收到的指令消息: [187, 15, 6, 2, 51, 46, 60, 46, 85, 0, 187] 
+2026-07-20T09:56:32.753708 [Level.warning] [BLE] [TX] [Data]: AA F3 00 00 AA 
+2026-07-20T09:56:32.820455 [Level.warning] [BLE] [RX] [Data]: BB F3 0C 58 31 30 20 50 68 61 6E 74 6F 6D 42 00 BB 
+2026-07-20T09:56:32.820945 [Level.warning] [BLE] 收到的指令消息: [187, 243, 12, 88, 49, 48, 32, 80, 104, 97, 110, 116, 111, 109, 66, 0, 187] 
+2026-07-20T09:56:33.591063 [Level.warning] [BLE] [TX] [Data]: AA 1D 02 05 0B 00 AA 
+2026-07-20T09:56:33.639407 [Level.warning] [BLE] [RX] [Data]: BB 1D 00 00 BB 
+2026-07-20T09:56:33.640036 [Level.warning] [BLE] 收到的指令消息: [187, 29, 0, 0, 187] 
+2026-07-20T09:56:34.717726 [Level.warning] [Agora] 离开频道！！！ 
+2026-07-20T09:56:34.850801 [Level.warning] [BLE] [TX] [Data]: AA 6B 01 01 00 AA 
+2026-07-20T09:56:34.930083 [Level.warning] [BLE] [RX] [Data]: BB 6B 00 00 BB 
+2026-07-20T09:56:34.930260 [Level.warning] [BLE] 收到的指令消息: [187, 107, 0, 0, 187] 
+2026-07-20T09:56:41.454978 [Level.warning] [BLE] 连接设备后，把设备信息传给后台 传惨 ={sn: 8028B23D01A1895A, active_status: 1, model_code: 45, version: 1.9.0, electricity: 100, config: {bluetooth: 00:12:6F:1C:65:C3}, iso_code: , lat: 22.28992682995765, lon: 114.21205072202028} 
+2026-07-20T09:56:41.532628 [Level.warning] [BLE] [RX] [Data]: BB 01 06 00 00 00 05 00 00 00 BB 
+2026-07-20T09:56:41.532996 [Level.warning] [BLE] 收到的指令消息: [187, 1, 6, 0, 0, 0, 5, 0, 0, 0, 187] 
+2026-07-20T09:56:42.110457 [Level.warning] [BLE] 连接设备后，把设备信息传给后台 ={code: 1, msg: Operation successful!, time: 1784512601, data: null} 
+2026-07-20T09:57:00.837242 [Level.warning] [BLE] [RX] [Data]: BB 1E 01 64 00 BB 
+2026-07-20T09:57:00.837818 [Level.warning] [BLE] 收到的指令消息: [187, 30, 1, 100, 0, 187] 
+2026-07-20T09:57:05.785887 [Level.warning] [BLE] [RX] [Data]: BB 01 06 00 00 00 05 00 00 00 BB 
+2026-07-20T09:57:05.786221 [Level.warning] [BLE] 收到的指令消息: [187, 1, 6, 0, 0, 0, 5, 0, 0, 0, 187] 
+2026-07-20T09:57:06.049102 [Level.warning] [BLE] [TX] [Data]: AA 6B 01 00 00 AA 
+2026-07-20T09:57:06.275727 [Level.warning] [BLE] [RX] [Data]: BB 6B 00 00 BB 
+2026-07-20T09:57:06.275991 [Level.warning] [BLE] 收到的指令消息: [187, 107, 0, 0, 187] 
+2026-07-20T09:57:27.518491 [Level.warning] [BLE] [TX] [Data]: AA 29 00 00 AA 
+2026-07-20T09:57:27.549252 [Level.warning] [BLE] [RX] [Data]: BB 29 01 FF 00 BB 
+2026-07-20T09:57:27.549429 [Level.warning] [BLE] 收到的指令消息: [187, 41, 1, 255, 0, 187] 
+2026-07-20T09:57:27.551425 [Level.warning] [BLE] [TX] [Data]: AA 4E 00 00 AA 
+2026-07-20T09:57:27.567622 [Level.warning] [BLE] [RX] [Data]: BB 4E 01 00 00 BB 
+2026-07-20T09:57:27.567799 [Level.warning] [BLE] 收到的指令消息: [187, 78, 1, 0, 0, 187] 
+2026-07-20T09:57:27.569576 [Level.warning] [BLE] [TX] [Data]: AA 1F 00 00 AA 
+2026-07-20T09:57:27.580829 [Level.warning] [BLE] [RX] [Data]: BB 1F 01 00 00 BB 
+2026-07-20T09:57:27.581012 [Level.warning] [BLE] 收到的指令消息: [187, 31, 1, 0, 0, 187] 
+2026-07-20T09:57:30.247035 [Level.warning] [BLE] [RX] [Data]: BB 01 06 00 00 00 05 00 00 00 BB 
+2026-07-20T09:57:30.247644 [Level.warning] [BLE] 收到的指令消息: [187, 1, 6, 0, 0, 0, 5, 0, 0, 0, 187] 
+2026-07-20T09:57:30.527265 [Level.warning] [BLE] [RX] [Data]: BB 1E 01 64 00 BB 
+2026-07-20T09:57:30.527641 [Level.warning] [BLE] 收到的指令消息: [187, 30, 1, 100, 0, 187] 
+2026-07-20T09:57:35.092097 [Level.warning] [BLE] [TX] [Data]: AA 2C 01 02 00 AA 
+2026-07-20T09:57:35.472788 [Level.warning] [BLE] [RX] [Data]: BB 29 01 03 00 BB 
+2026-07-20T09:57:35.473021 [Level.warning] [BLE] 收到的指令消息: [187, 41, 1, 3, 0, 187] 
+2026-07-20T09:57:35.478517 [Level.warning] [BLE] [RX] [Data]: BB 2C 00 00 BB 
+2026-07-20T09:57:35.478718 [Level.warning] [BLE] 收到的指令消息: [187, 44, 0, 0, 187] 
+2026-07-20T09:57:35.664059 [Level.warning] [BLE] [RX] [Data]: BB 29 01 01 00 BB 
+2026-07-20T09:57:35.664337 [Level.warning] [BLE] 收到的指令消息: [187, 41, 1, 1, 0, 187] 
+2026-07-20T09:57:35.665663 [Level.warning] [BLE] [TX] [Data]: AA 29 00 00 AA 
+2026-07-20T09:57:35.857388 [Level.warning] [BLE] [RX] [Data]: BB 29 01 02 00 BB 
+2026-07-20T09:57:35.857833 [Level.warning] [BLE] 收到的指令消息: [187, 41, 1, 2, 0, 187] 
+2026-07-20T09:57:41.569813 [Level.warning] [BLE] [TX] [Data]: AA 1C 00 00 AA 
+2026-07-20T09:57:41.933959 [Level.warning] [BLE] [RX] [Data]: BB 29 01 01 00 BB 
+2026-07-20T09:57:41.934200 [Level.warning] [BLE] 收到的指令消息: [187, 41, 1, 1, 0, 187] 
+2026-07-20T09:57:41.935490 [Level.warning] [BLE] [TX] [Data]: AA 29 00 00 AA 
+2026-07-20T09:57:41.942006 [Level.warning] [BLE] [RX] [Data]: BB 1C 00 00 BB 
+2026-07-20T09:57:41.942206 [Level.warning] [BLE] 收到的指令消息: [187, 28, 0, 0, 187] 
+2026-07-20T09:57:41.943225 [Level.warning] [BLE] [TX] [Data]: AA 29 00 00 AA 
+2026-07-20T09:57:42.005787 [Level.warning] [BLE] [RX] [Data]: BB FF 02 29 02 00 BB 
+2026-07-20T09:57:42.005979 [Level.warning] [BLE] 收到的指令消息: [187, 255, 2, 41, 2, 0, 187] 
+2026-07-20T09:57:42.006996 [Level.warning] [BLE] [TX] [Data]: AA 29 00 00 AA 
+2026-07-20T09:57:42.019055 [Level.warning] [BLE] [RX] [Data]: BB 29 01 FF 00 BB 
+2026-07-20T09:57:42.019253 [Level.warning] [BLE] 收到的指令消息: [187, 41, 1, 255, 0, 187] 
+2026-07-20T09:57:54.268551 [Level.warning] [BLE] [TX] [Data]: AA 28 00 00 AA 
+2026-07-20T09:57:54.283968 [Level.warning] [BLE] [RX] [Data]: BB 28 01 FF 00 BB 
+2026-07-20T09:57:54.284170 [Level.warning] [BLE] 收到的指令消息: [187, 40, 1, 255, 0, 187] 
+2026-07-20T09:57:54.285160 [Level.warning] [BLE] [TX] [Data]: AA 28 00 00 AA 
+2026-07-20T09:57:54.304518 [Level.warning] [BLE] [RX] [Data]: BB 28 01 FF 00 BB 
+2026-07-20T09:57:54.304716 [Level.warning] [BLE] 收到的指令消息: [187, 40, 1, 255, 0, 187] 
+2026-07-20T09:57:54.705903 [Level.warning] [BLE] [RX] [Data]: BB 01 06 00 00 00 05 00 00 00 BB 
+2026-07-20T09:57:54.706167 [Level.warning] [BLE] 收到的指令消息: [187, 1, 6, 0, 0, 0, 5, 0, 0, 0, 187] 
+2026-07-20T09:57:57.523044 [Level.warning] [BLE] [TX] [Data]: AA 17 00 00 AA 
+2026-07-20T09:57:57.558722 [Level.warning] [BLE] [RX] [Data]: BB 17 00 00 BB 
+2026-07-20T09:57:57.558913 [Level.warning] [BLE] 收到的指令消息: [187, 23, 0, 0, 187] 
+2026-07-20T09:57:57.560190 [Level.warning] [BLE] [TX] [Data]: AA 4B 00 00 AA 
+2026-07-20T09:58:00.563936 [Level.warning] [BLE] [RX] [Data]: BB 1E 01 64 00 BB 
+2026-07-20T09:58:00.564605 [Level.warning] [BLE] 收到的指令消息: [187, 30, 1, 100, 0, 187] 
+2026-07-20T09:58:01.208131 [Level.warning] [BLE] [RX] [Data]: BB 39 01 05 00 BB 
+2026-07-20T09:58:01.208449 [Level.warning] [BLE] 收到的指令消息: [187, 57, 1, 5, 0, 187] 
+2026-07-20T09:58:01.860278 [Level.warning] [BLE] [RX] [Data]: BB 01 06 00 02 00 05 59 32 00 BB 
+2026-07-20T09:58:01.860589 [Level.warning] [BLE] 收到的指令消息: [187, 1, 6, 0, 2, 0, 5, 89, 50, 0, 187] 
+2026-07-20T09:58:01.862604 [Level.warning] [BLE] [TX] [Data]: AA 28 00 00 AA 
+2026-07-20T09:58:01.914120 [Level.warning] [BLE] [RX] [Data]: BB 28 01 01 00 BB 
+2026-07-20T09:58:01.914568 [Level.warning] [BLE] 收到的指令消息: [187, 40, 1, 1, 0, 187] 
+2026-07-20T09:58:01.916292 [Level.warning] [BLE] [TX] [Data]: AA 4B 00 00 AA 
+2026-07-20T09:58:01.936936 [Level.warning] [BLE] [RX] [Data]: BB 4B 02 59 32 00 BB 
+2026-07-20T09:58:01.937251 [Level.warning] [BLE] 收到的指令消息: [187, 75, 2, 89, 50, 0, 187] 
+2026-07-20T09:58:02.379377 [Level.warning] [BLE] [RX] [Data]: BB 01 06 00 02 00 05 59 32 00 BB 
+2026-07-20T09:58:02.379579 [Level.warning] [BLE] 收到的指令消息: [187, 1, 6, 0, 2, 0, 5, 89, 50, 0, 187] 
+2026-07-20T09:58:02.398039 [Level.warning] [BLE] [TX] [Data]: AA 35 00 00 AA 
+2026-07-20T09:58:02.398308 [Level.warning] [BLE] TX Warning: Not have onResponse! 
+2026-07-20T09:58:02.416874 [Level.warning] [BLE] [RX] [Data]: BB 35 00 00 BB 
+2026-07-20T09:58:02.417058 [Level.warning] [BLE] 收到的指令消息: [187, 53, 0, 0, 187] 
+2026-07-20T09:58:04.933923 [Level.warning] [BLE] [RX] [Data]: BB 01 06 00 02 00 05 5A 1E 00 BB 
+2026-07-20T09:58:04.934490 [Level.warning] [BLE] 收到的指令消息: [187, 1, 6, 0, 2, 0, 5, 90, 30, 0, 187] 
+2026-07-20T09:58:07.604504 [Level.warning] [BLE] [TX] [Data]: AA 35 00 00 AA 
+2026-07-20T09:58:07.604705 [Level.warning] [BLE] TX Warning: Not have onResponse! 
+2026-07-20T09:58:07.641783 [Level.warning] [BLE] [RX] [Data]: BB 35 00 00 BB 
+2026-07-20T09:58:07.641970 [Level.warning] [BLE] 收到的指令消息: [187, 53, 0, 0, 187] 
+2026-07-20T09:58:11.694633 [Level.warning] [BLE] [RX] [Data]: BB 01 06 00 02 00 05 5C 0A 00 BB 
+2026-07-20T09:58:11.695035 [Level.warning] [BLE] 收到的指令消息: [187, 1, 6, 0, 2, 0, 5, 92, 10, 0, 187] 
+2026-07-20T09:58:12.680914 [Level.warning] [BLE] [TX] [Data]: AA 35 00 00 AA 
+2026-07-20T09:58:12.681192 [Level.warning] [BLE] TX Warning: Not have onResponse! 
+2026-07-20T09:58:13.103226 [Level.warning] [BLE] [RX] [Data]: BB 35 00 00 BB 
+2026-07-20T09:58:13.103418 [Level.warning] [BLE] 收到的指令消息: [187, 53, 0, 0, 187] 
+2026-07-20T09:58:17.976574 [Level.warning] [BLE] [RX] [Data]: BB 01 06 00 02 00 05 5E 28 00 BB 
+2026-07-20T09:58:17.977002 [Level.warning] [BLE] 收到的指令消息: [187, 1, 6, 0, 2, 0, 5, 94, 40, 0, 187] 
+2026-07-20T09:58:18.725658 [Level.warning] [BLE] [TX] [Data]: AA 17 00 00 AA 
+2026-07-20T09:58:19.037370 [Level.warning] [BLE] [RX] [Data]: BB 17 00 00 BB 
+2026-07-20T09:58:19.037659 [Level.warning] [BLE] 收到的指令消息: [187, 23, 0, 0, 187] 
+2026-07-20T09:58:19.578106 [Level.warning] [BLE] [RX] [Data]: BB 01 06 00 00 00 05 5E 28 00 BB 
+2026-07-20T09:58:19.578426 [Level.warning] [BLE] 收到的指令消息: [187, 1, 6, 0, 0, 0, 5, 94, 40, 0, 187] 
+2026-07-20T09:58:19.580079 [Level.warning] [BLE] [TX] [Data]: AA 28 00 00 AA 
+2026-07-20T09:58:19.600744 [Level.warning] [BLE] [RX] [Data]: BB 28 01 FF 00 BB 
+2026-07-20T09:58:19.601123 [Level.warning] [BLE] 收到的指令消息: [187, 40, 1, 255, 0, 187] 
+2026-07-20T09:58:22.907346 [Level.warning] [BLE] [TX] [Data]: AA 5A 00 00 AA 
+2026-07-20T09:58:22.925453 [Level.warning] [BLE] [RX] [Data]: BB 5A 01 05 00 BB 
+2026-07-20T09:58:22.925700 [Level.warning] [BLE] 收到的指令消息: [187, 90, 1, 5, 0, 187] 
+2026-07-20T09:58:22.927209 [Level.warning] [BLE] [TX] [Data]: AA 5C 01 01 00 AA 
+2026-07-20T09:58:22.964082 [Level.warning] [BLE] [RX] [Data]: BB 5C 02 01 01 00 BB 
+2026-07-20T09:58:22.964356 [Level.warning] [BLE] 收到的指令消息: [187, 92, 2, 1, 1, 0, 187] 
+2026-07-20T09:58:22.965664 [Level.warning] [BLE] [TX] [Data]: AA 6E 01 01 00 AA 
+2026-07-20T09:58:22.978583 [Level.warning] [BLE] [RX] [Data]: BB 6E 02 01 00 00 BB 
+2026-07-20T09:58:22.978824 [Level.warning] [BLE] 收到的指令消息: [187, 110, 2, 1, 0, 0, 187] 
+2026-07-20T09:58:22.980258 [Level.warning] [BLE] [TX] [Data]: AA 5C 01 04 00 AA 
+2026-07-20T09:58:23.010641 [Level.warning] [BLE] [RX] [Data]: BB 5C 02 04 02 00 BB 
+2026-07-20T09:58:23.010945 [Level.warning] [BLE] 收到的指令消息: [187, 92, 2, 4, 2, 0, 187] 
+2026-07-20T09:58:23.012376 [Level.warning] [BLE] [TX] [Data]: AA 0F 01 02 00 AA 
+2026-07-20T09:58:23.028827 [Level.warning] [BLE] [RX] [Data]: BB 0F 06 02 33 2E 3C 2E 55 00 BB 
+2026-07-20T09:58:23.029152 [Level.warning] [BLE] 收到的指令消息: [187, 15, 6, 2, 51, 46, 60, 46, 85, 0, 187] 
+2026-07-20T09:58:23.030384 [Level.warning] [BLE] [TX] [Data]: AA 6E 01 04 00 AA 
+2026-07-20T09:58:23.042780 [Level.warning] [BLE] [RX] [Data]: BB 6E 02 04 00 00 BB 
+2026-07-20T09:58:23.042972 [Level.warning] [BLE] 收到的指令消息: [187, 110, 2, 4, 0, 0, 187] 
+2026-07-20T09:58:23.044247 [Level.warning] [BLE] [TX] [Data]: AA 5E 00 00 AA 
+2026-07-20T09:58:23.064531 [Level.warning] [BLE] [RX] [Data]: BB 5E 01 01 00 BB 
+2026-07-20T09:58:23.064757 [Level.warning] [BLE] 收到的指令消息: [187, 94, 1, 1, 0, 187] 
+2026-07-20T09:58:30.936576 [Level.warning] [BLE] [RX] [Data]: BB 1E 01 64 00 BB 
+2026-07-20T09:58:30.937141 [Level.warning] [BLE] 收到的指令消息: [187, 30, 1, 100, 0, 187] 
+2026-07-20T09:58:32.470749 [Level.warning] [BLE] [TX] [Data]: AA 1D 02 00 03 00 AA 
+2026-07-20T09:58:32.952162 [Level.warning] [BLE] [RX] [Data]: BB 1D 00 00 BB 
+2026-07-20T09:58:32.952460 [Level.warning] [BLE] 收到的指令消息: [187, 29, 0, 0, 187] 
+2026-07-20T09:58:33.419934 [Level.warning] [BLE] [RX] [Data]: BB 01 06 00 01 00 05 5E 28 00 BB 
+2026-07-20T09:58:33.420223 [Level.warning] [BLE] 收到的指令消息: [187, 1, 6, 0, 1, 0, 5, 94, 40, 0, 187] 
+2026-07-20T09:58:35.432670 [Level.warning] [BLE] [RX] [Data]: BB 01 06 00 00 00 05 5E 28 00 BB 
+2026-07-20T09:58:35.433009 [Level.warning] [BLE] 收到的指令消息: [187, 1, 6, 0, 0, 0, 5, 94, 40, 0, 187] 
+2026-07-20T09:58:36.020953 [Level.warning] [BLE] [TX] [Data]: AA 3E 00 00 AA 
+2026-07-20T09:58:36.053678 [Level.warning] [BLE] [RX] [Data]: BB 3E 01 FF 00 BB 
+2026-07-20T09:58:36.053878 [Level.warning] [BLE] 收到的指令消息: [187, 62, 1, 255, 0, 187] 
+2026-07-20T09:58:43.807006 [Level.warning] [BLE] [RX] [Data]: BB 01 06 00 00 00 05 5E 28 00 BB 
+2026-07-20T09:58:43.807636 [Level.warning] [BLE] 收到的指令消息: [187, 1, 6, 0, 0, 0, 5, 94, 40, 0, 187] 
+2026-07-20T09:58:49.273542 [Level.warning] [BLE] [TX] [Data]: AA 1D 02 02 03 00 AA 
+2026-07-20T09:58:49.737669 [Level.warning] [BLE] [RX] [Data]: BB 1D 00 00 BB 
+2026-07-20T09:58:49.738022 [Level.warning] [BLE] 收到的指令消息: [187, 29, 0, 0, 187] 
+2026-07-20T09:58:50.271377 [Level.warning] [BLE] [RX] [Data]: BB 01 06 00 01 00 05 5E 28 00 BB 
+2026-07-20T09:58:50.271761 [Level.warning] [BLE] 收到的指令消息: [187, 1, 6, 0, 1, 0, 5, 94, 40, 0, 187] 
+2026-07-20T09:58:51.981835 [Level.warning] [BLE] [TX] [Data]: AA 1D 02 01 04 00 AA 
+2026-07-20T09:58:52.024637 [Level.warning] [BLE] [RX] [Data]: BB 1D 00 00 BB 
+2026-07-20T09:58:52.024826 [Level.warning] [BLE] 收到的指令消息: [187, 29, 0, 0, 187] 
+2026-07-20T09:58:55.344326 [Level.warning] [BLE] [TX] [Data]: AA 1D 02 05 0A 00 AA 
+2026-07-20T09:58:55.387413 [Level.warning] [BLE] [RX] [Data]: BB 1D 00 00 BB 
+2026-07-20T09:58:55.387687 [Level.warning] [BLE] 收到的指令消息: [187, 29, 0, 0, 187] 
+2026-07-20T09:58:56.134122 [Level.warning] [BLE] [RX] [Data]: BB 01 06 00 01 00 05 5E 28 00 BB 
+2026-07-20T09:58:56.134595 [Level.warning] [BLE] 收到的指令消息: [187, 1, 6, 0, 1, 0, 5, 94, 40, 0, 187] 
+2026-07-20T09:58:59.483446 [Level.warning] [BLE] [RX] [Data]: BB 01 06 00 00 00 05 5E 28 00 BB 
+2026-07-20T09:58:59.483783 [Level.warning] [BLE] 收到的指令消息: [187, 1, 6, 0, 0, 0, 5, 94, 40, 0, 187] 
+2026-07-20T09:58:59.895220 [Level.warning] [BLE] [TX] [Data]: AA 1D 02 04 05 00 AA 
+2026-07-20T09:58:59.939211 [Level.warning] [BLE] [RX] [Data]: BB 1D 00 00 BB 
+2026-07-20T09:58:59.939407 [Level.warning] [BLE] 收到的指令消息: [187, 29, 0, 0, 187] 
+2026-07-20T09:59:00.540430 [Level.warning] [BLE] [RX] [Data]: BB 1E 01 64 00 BB 
+2026-07-20T09:59:00.540887 [Level.warning] [BLE] 收到的指令消息: [187, 30, 1, 100, 0, 187] 
+2026-07-20T09:59:00.609701 [Level.warning] [BLE] [RX] [Data]: BB 01 06 00 01 00 05 5E 28 00 BB 
+2026-07-20T09:59:00.610059 [Level.warning] [BLE] 收到的指令消息: [187, 1, 6, 0, 1, 0, 5, 94, 40, 0, 187] 
+2026-07-20T09:59:03.896060 [Level.warning] [BLE] [RX] [Data]: BB 01 06 00 00 00 05 5E 28 00 BB 
+2026-07-20T09:59:03.896379 [Level.warning] [BLE] 收到的指令消息: [187, 1, 6, 0, 0, 0, 5, 94, 40, 0, 187] 
+2026-07-20T09:59:07.738889 [Level.warning] [BLE] [TX] [Data]: AA 1B 01 01 00 AA 
+2026-07-20T09:59:07.782242 [Level.warning] [BLE] [RX] [Data]: BB 1B 00 00 BB 
+2026-07-20T09:59:07.782434 [Level.warning] [BLE] 收到的指令消息: [187, 27, 0, 0, 187] 
+2026-07-20T09:59:08.095796 [Level.warning] [BLE] [RX] [Data]: BB 01 06 00 00 00 05 5E 28 00 BB 
+2026-07-20T09:59:08.096105 [Level.warning] [BLE] 收到的指令消息: [187, 1, 6, 0, 0, 0, 5, 94, 40, 0, 187] 
+2026-07-20T09:59:30.828034 [Level.warning] [BLE] [RX] [Data]: BB 1E 01 64 00 BB 
+2026-07-20T09:59:30.828676 [Level.warning] [BLE] 收到的指令消息: [187, 30, 1, 100, 0, 187] 
+2026-07-20T09:59:32.801114 [Level.warning] [BLE] [RX] [Data]: BB 01 06 00 00 00 05 5E 28 00 BB 
+2026-07-20T09:59:32.801532 [Level.warning] [BLE] 收到的指令消息: [187, 1, 6, 0, 0, 0, 5, 94, 40, 0, 187] 

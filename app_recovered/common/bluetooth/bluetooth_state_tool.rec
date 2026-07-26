@@ -1,0 +1,63 @@
+// pseudo-code for bluetooth_state_tool.dart assembly
+
+// Class: BluetoothScanStatus (Enum)
+// Purpose: Represents the different operational phases of a Bluetooth scan operation.
+// States identified in disassembly:
+// - 0: Unknown/Initial state
+// - 1: Searching/Scanning active
+// - 2: Error/Failed state
+// - 3-5: Various transitionary or error states (e.g., "Turning on", "Turning off")
+// - 6+: Terminal error states (e.g., "Permission Denxmited")
+
+// Function: BluetoothScanStatusExtension.description(BluetoothScanStatus status)
+// Logic: Translates internal enum integer values into human-readable, localized strings for the UI.
+// 1. Checks the integer value of the scan status.
+// 2. Performs a series of conditional branches ( cmp / b.gt ) to match the state.
+// 3. Returns localized error/status messages via 'lang()' manager:
+//    - Status 0: "蓝牙适配器的状态未知" (Bluetooth adapter state unknown)
+//    - Status 1: "蓝牙适配器不可用" (Bluetooth adapter unavailable)
+//    - Status 2: "应用未被授权..." (Permission denied...)
+//    - Status 3: "蓝牙适配器正在开启中" (Bluetooth adapter turning on)
+//    - Status 5: "蓝牙适配器正在关闭中" (Bluetooth adapter turning off)
+//    - Status 6: "系统蓝牙开关已关闭..." (System Bluetooth is off...)
+//    - Status 7+: "定位权限被拒绝" (Location permission denied)
+
+// Class: BluetoothStateManager (ChangeNotifier)
+// Purpose: A singleton controller that maintains the global "Source of Truth" for Bluetooth availability and scan status.
+// Fields:
+// - scanStatus (BluetoothScanStatus): The current reactive state of ongoing or completed scans.
+
+// Function: BluetoothStateManager._privateConstructor()
+// Logic: Initializes the manager with default states.
+// 1. Sets initial scan status to a neutral/null state.
+// 2. Initializes the listener list for the ChangeNotifier.
+// 3. Starts the background monitoring loop via '_startListening()'.
+
+// Function: BluetoothStateManager._startListening()
+// Logic: Sets up the underlying hardware event listeners.
+// 1. Polls the `BluetoothAdapterState` from the `FlutterBluePlus` plugin.
+// 2. Attaches a listener that triggers on physical hardware state changes (e.g., user toggling Bluetooth in Android/iOS settings).
+// 3. When a change is detected, it calls `_checkBluetoothStatus()` and notifies all application subscribers via `notifyListeners()`.
+
+// Function: BluetoothStateManager._checkBluetoothStatus()
+// Logic: Evalus the current hardware state and updates the reactive scan status.
+// 1. Inspects `FlutterBluePlus::adapterState`.
+// 2. Maps specific adapter states (e.g., unavailable, disconnected, turning_on, turning_off) to the internal `BluetoothScanStatus` enum.
+// 3. Updates the `scanStatus` field with the newly identified state.
+
+// Function: BluetoothStateManager._checkLocationPermissions()
+// Logic: Verifies that the app meets the regulatory requirements for Bluetooth scanning (which requires Location on many Android versions).
+// 1. Uses 'permission_handler' to check status of 'Bluetooth' and 'Location' permissions.
+// 2. Returns 'true' if all required permissions are granted, otherwise returns 'false'.
+
+// Function: BluetoothStateManager.isCanScanBluetoothDevice()
+// Logic: A high-level convenience method used by the UI/Controllers to decide if a scan can be safely started.
+// 1. Coordinates the results of `_checkLocationPermissions()` and `_getAdapterState()`.
+// 2. Returns 'true' only if the hardware is ready AND permissions are present. 
+// 3. Logs errors via 'XLog::ble' if the check fails (e.g., "Scan Error : checking Bluetooth state").
+
+// Summary of file: bluetooth_state_tool.dart
+// This class acts as the system-level watchdog for Bluetooth readiness. It abstracts the complex, 
+// permission-heavy checks of the Android/iOS Bluetooth stacks into a simple, reactive 'BluetoothScanStatus' 
+0. It ensures that high-level modules (like BleManager) do not attempt operations that are 
+   guaranteed to fail due to hardware presence or OS permission restrictions.

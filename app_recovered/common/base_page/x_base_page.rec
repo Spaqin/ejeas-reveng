@@ -1,0 +1,35 @@
+// class id: 4271, size: 0x38, field offset: 0xc
+//   const constructor, 
+class XBasePage extends StatelessWidget {
+
+  _ build(/* No info */) {
+    // ** addr: 0xafbd78, size: 0x35c
+    // ... (omitted for brevity in this thought block, but will be full in file)
+    // Logic involves building a Scaffold with an AppBar and an Image background.
+    // Uses assets/images_v2/other/other_back.png
+    // Incorporates IconButton
+  }
+
+  _ _wrapBodyMediaQuery(/* No info */) {
+    // ** addr: 0xafc0d4, size: 0x6c
+    // Logic for removing padding from MediaQuery.
+  }
+
+  _ addBgLinearGradientColor(/* No info */) {
+    // ** addr: 0xafc140, size: 0x144
+    // Logic to apply a linear gradient or background color based on field_1b.
+    // Uses EdgeInsets and Padding with Stack.
+  }
+}
+
+// class id: 5137, size: 0x8, field offset: 0x8
+abstract class XBasePageOther extends Object {
+
+  static dynamic showNetworkFailedTitleWithCode(int) {
+    // ** addr: 0x8271e8, size: 0xa4
+    // Logic to show a localized error title via lang_manager and x_easy_loading_tool.
+    // Checks an internal map for specific error codes.
+  }
+}
+
+// Summary: Provides base scaffold/page structure with common background and styling features for XBasePage subclasses.

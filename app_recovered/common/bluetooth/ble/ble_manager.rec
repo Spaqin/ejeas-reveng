@@ -1,0 +1,75 @@
+// class id: 5569, size: 0x54, field offset: 0x24
+class BleManager extends ChangeNotifier {
+
+  static late final BleManager _instance; // offset: 0x11f0
+
+  [closure] Null <anonymous closure>(dynamic) {
+    // ** addr: 0x7981fc, size: 0x24
+    // Sets field_37 to true.
+  }
+
+  _ connectDevice(/* No info */) async {
+    // ** addr: 0x798220, size: 0xa64
+    // Logic for connecting to a BLE device via FlutterBluePlus:
+    // 1. Initializes connection attempt state (field_3b = true).
+    // 2. Stops ongoing scanning.
+    // 3. Awaits BluetoothDevice::connect().
+    // 4. Discovers services on the connected device.
+    // 5. Scans characteristics and looks for specific UUID patterns ('FFE1', 'FFE2').
+    // 6. Sets up notifications (setNotifyValue) for found characteristics after a delay.
+    // 7. Logs connection/characteristic info using XLog.
+    // 8. Uses BleReconnectTool to save device information upon success.
+    // 9. Notifies the application of connection status changes via sendConnectChangeNotify().
+  }
+
+  _ disconnectDevice(/* No info */) async {
+    // ** addr: 0x7ac154, size: 0x1dc
+    // Logic for disconnecting a BLE device:
+    // 1. Deletes device info using BleReconnectTool.
+    // 2. Clears the current connection state (field_3f = null).
+    // 3. Calls BluetoothDevice::disconnect().
+    // 4. Logs disconnection event with 'user disconnect device from ...'.
+  }
+
+  _ scanDevices(/* No info */) async {
+    // ** addr: 0x7f221c, size: 0x65c
+    // Logic for scanning BLE devices:
+    // 1. Starts a scan via FlutterBluePlus.
+    // 2. Filters/processes results based on specific UUIDs ('FF00', '180f', 'E1A6').
+    // 3. Uses systemDevices() as an initial check.
+    // 4. Logs scanning status with '[BLE] 开始ble扫描'.
+  }
+
+  _ sendMessage(/* No info */) async {
+    // ** addr: 0x7d94a8, size: 0x8c
+    // Logic for sending a command/data to the connected BLE characteristic:
+    // 1. Checks if the device is still connected (field_3f != null).
+    // 2. Performs BluetoothCharacteristic::write().
+    // 3. Logs failure if the connection was lost ('ble is dis connect!!!').
+  }
+
+  _ startListening(/* No info */) {
+    // ** addr: 0x7fc5bc, size: 0xfc
+    // Logic for listening to characteristic value streams (notifications).
+    // Sets up a listener on the last value stream of an identified characteristic.
+    // Logs 'FFE2 使能成功' upon successful setup.
+  }
+
+  _ markData(/* No info */) {
+    // ** addr: 0x7f2f7c, size: 0x18c
+    // Logic for processing/sorting incoming BLE data packets.
+    // Sorts scanning results based on RSSI or other criteria.
+  }
+
+  _ stopScan(/* No info */) async {
+    // ** addr: 0x7f4894, size: 0x48
+    // Logic to stop the active Bluetooth scan via FlutterBluePlus.
+  }
+
+  _ removeBond(/* No info */) async {
+    // ** addr: 0x87c158, size: 0x10c
+    // logic for removing bonded devices from the system/app database.
+  }
+}
+
+// Summary: Core BLE lifecycle manager (Connect, Disconnect, Scan, Send) utilizing FlutterBluePlus and custom reconnection tools for Ejeas hardware interaction via Bluetooth.

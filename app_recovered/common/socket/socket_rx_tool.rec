@@ -1,0 +1,28 @@
+// class id: 5564, size: 0x2c, field offset: 0x24
+class SocketRxTool extends ChangeNotifier {
+
+  static late final SocketRxTool _instance; // offset: 0x1334
+
+  _ SocketRxTool._internal(/* No info */) {
+    // ** addr: 0x7a69b8, size: 0xd0
+    // Initializes the SocketRxTool instance.
+    // 1. Retrieves SocketGetXTool controller.
+    // 2. Initializes a list of XMessageModel to track received messages.
+    // 3. Resets internal state (flags, buffers).
+  }
+
+  _ processReceivedData(/* No info */) async {
+    // ** addr: 0x9246c8, size: 0x39e0
+    // Parses and processes raw incoming WebSocket data.
+    // 1. Decodes JSON payload from the received byte stream.
+    // 2. Validates presence of critical keys: 'private_key', 'signature', 'sendTimeTamp', 'status'.
+    // 3. Handles specific message types:
+    //    - 'status': If status is non-zero (e.g., '-3'), displays error via XEasyLoadingTool with localized message.
+    //    - 'broadcasts': Checks for 'msgType' and 'broadcasts' keys. If found, triggers a refresh in ChatListRefreshController.
+    //    - 'msgId'/'sendIsOnline'/'sendUserInfo': Updates local message state and database via XMessageModel.
+    // 4. Updates the message list with new XMessageModel instances.
+    // 5. Updates 'distance', 'unit', 'avatar' based on payload.
+  }
+}
+
+// Summary: Handles incoming WebSocket messages. It decodes JSON payloads, validates security/status fields (signature, status), and routes data to appropriate controllers (ChatList, XMessageModel, etc.) based on message type and content.

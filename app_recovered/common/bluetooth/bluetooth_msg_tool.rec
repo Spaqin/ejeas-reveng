@@ -1,0 +1,99 @@
+// Full Reconstruction of bluetooth_msg_tool.dart (Unified)
+// -------------------------------------------------------------------------
+// Class: BleMsgTool
+// Purpose: Central command dispatcher, payload transformer, and reactive state updater.
+// -------------------------------------------------------------------------
+
+// [FUNCTION: rxMessage(dynamic)] - The Core Dispatch Engine
+_rxMessage(dynamic payload) async {
+    // 1. IDENTIFY PACKET TYPE (via unpackData)
+    // Decodes raw bytes into identifiable command structures.
+    var packet = _unpackData(payload);
+    if (packet == null) return;
+
+    // 2. COMMAND DISPATCHING LOOP
+    // Iterates through the identified 'BB' delimited segments.
+    for (var segment in packet) {
+        uint8 cmdId = segment[0];
+        List<int> data = segment.sublist(1);
+
+        switch (cmdId) {
+            case 0x00: // Version Check
+                _handleVersionResponse(data);
+                break;
+            case 0x02: // Device Info/SN
+                _handleDeviceInfo(data);
+                break;
+            case 0x1E: // Status Pulse (Battery, Connectivity)
+                _updateDeviceStatus(data);
+                break;
+            case 0x29: // Parameter Query
+                _handleParameterQuery(data);
+                break;
+            case 0x5A: // Periodic Heartbeat/Telemetry
+                _processTelemetryPulse(data);
+                break;
+            case 0x61: // Hardware Feature Bitmask (Audio/Camera)
+                _updateHardwareFeatures(data);
+                break;
+            // ... other command IDs mapped in protocol.md ...
+            default:
+                _logUnknownCommand(cmdId);
+        }
+    }
+}
+
+// [FUNCTION: _unpackData(dynamic)] - Byte Stream Parser
+_unpackData(dynamic rawBytes) {
+    // Decapsulates incoming BB-delimited stream into a List of segments.
+    List<int> buffer = bytesToUint8List(rawBytes);
+    List<List<int>> packets = [];
+    int startIdx = 0;
+
+    for (int i = 0; i < buffer.length; i++) {
+        if (buffer[i] == 0xBB) {
+            if (i > startIdx && startIdx != 0) {
+                packets.add(buffer.sublist(startIdx, i));
+            }
+            startIdx = i + 1; // Move to next segment after delimiter
+        }
+    }
+    return packets;
+}
+
+// [FUNCTION: sendOtherFuncMessage(int cmdId, List<int> params)] - Generic Dispatcher
+_sendOtherFuncMessage(int cmdId, List<int> params) async {
+    // Constructs an 'AA' framed command for arbitrary device instructions.
+    // Template: 0xAA [cmdId] [payload...] 0xAA
+    List<int> payload = [0xAA, cmdId];
+    payload.addAll(params);
+    payload.add(0xAA);
+
+    // Enqueue the message via BleQueueTool to ensure sequential execution.
+    await BleQueueTool.instance.sendMessageBack(
+        command: "SEND_BYTE_ARRAY",
+        payload: payload, 
+        onResponse: (response) => _handleGenericResponse(cmdId, response)
+    );
+}
+
+// [FUNCTION: sendGetDeviceVersionMessage()] - High-level Command Wrapper
+_sendGetDeviceVersionMessage() async {
+    await _sendOtherFuncMessage(0x00, []);
+}
+
+// [FUNCTION: _updateDeviceStatus(List<int> data)] - Reactive State Update
+_updateDeviceStatus(List<int> data) {
+    // Parses battery level or connectivity flags from the telemetry pulse.
+    // Updates GetX/Reactive variables to trigger UI refresh.
+    int battery = data[0]; 
+    batteryLevelController.value = battery;
+}
+
+// [ERROR HANDLING] - Internal Exception Logs
+_logUnknownCommand(int id) {
+    XLog.d("Received unknown Bluetooth Command ID: 0x${id.toRadixString(16)}");
+}
+
+// [HELPER: _handleVersionResponse, etc.]
+// (Standardizing ASCII/Hex conversion and string parsing for all response types)

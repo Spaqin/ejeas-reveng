@@ -1,0 +1,50 @@
+// class id: 980, size: 0xcc, field offset: 0x1c
+class XOtaTool extends GetxController {
+
+  static late final XOtaTool _instance; // offset: 0x1208
+
+  _ XOtaTool._internal(/* No info */) {
+    // ** addr: 0x575168, size: 0x218
+    // Initializes the XOtaTool instance with reactive state for OTA process monitoring.
+    // 1. Sets up several reactive variables (RxBool, RxDouble, RxString, RxInt) using GetX.
+    // 2. Tracks:
+    //    - isUpdating (RxBool)
+    //    - progress (RxDouble)
+    //    - updateUrl (RxString)
+    //    - errorMsg (RxString)
+    //    - currentVersion (RxString)
+    //    - targetVersion (RxString)
+    //    - downloadStatus (RxString)
+    //    - retryCount (RxInt)
+    // 3. Initializes a list for update history/logs.
+  }
+
+  _ startOTA(/* No info */) async {
+    // ** addr: 0x83ac6c, size: 0x1f8
+    // Triggers the OTA update process.
+    // 1. Resets progress (0.0) and status flags.
+    // 2. Checks if an update is already in progress.
+    // 3. Shows a progress dialog via XEasyLoadingTool.
+    // 4. Triggers the `enterOTAUpdate` sequence.
+  }
+
+  _ updateBegin(/* No info */) async {
+    // ** addr: 0x83ae64, size: 0x4a4
+    // Manages the logic for starting the actual update procedure.
+    // 1. Interacts with Bluetooth (SupBleManager) if a connection is required/available.
+    // 2. Prepares the environment for receiving/downloading update files.
+    // 3. Uses `enterOTAUpdate` logic to transition the app into the update state.
+    // 4. Handles errors by calling `failUpdateOTA` if any step fails.
+  }
+
+  _ failUpdateOTA(/* No info */) async {
+    // ** addr: 0x83b5d0, size: 0x1f0
+    // Handles failure during the OTA process.
+    // 1. Updates error messages and state.
+    // 2. Dispatches error notifications to the user.
+  }
+}
+
+// Summary: Manages the Over-The-Air (OTA) update lifecycle for the device. 
+// It uses GetX for reactive progress tracking and coordinates between 
+// networking/bluetooth and the UI to ensure a smooth, user-monitored update process.

@@ -1,0 +1,53 @@
+// class id: 1011, size: 0x3c, field offset: 0x1c
+class SupBleManager extends GetXBaseController {
+
+  static late final SupBleManager _instance; // offset: 0x103c
+
+  [closure] Async<void> connectSuccessSendMessage(/* No info */) async {
+    // ** addr: 0x79dac, size: 0x20c
+    // Logic for executing a command after a successful connection to an A2DP-compatible device.
+    // 1. Checks if the current device type is BLE.
+    // 2. Calls SPPManager::connectA2dp() (which likely handles Bluetooth Classic/SPP connectivity).
+    // 3. Uses BleMsgTool to send a specific command via 'sendOtherFuncMessage'.
+    // 4. After a delay, triggers another message-sending routine ('sendBaseMessage') using BleMsgTool.
+    // 5. Logs status changes and updates the device model in local storage.
+  }
+
+  [closure] Async<void> scanDevices(/* No info */) async {
+    // ** addr: 0x7f20c0, size: 0x15c
+    // Logic for initiating a BLE scan.
+    // 1. Logs '开始扫描' (Starting Scan).
+    // 2. Checks if the device type is BLE.
+    0// 3. Calls SPPManager::startScan().
+    // 4. Awaits the completion of the scan.
+    // 5. After scanning, triggers BleManager::scanDevices() to process the results.
+  }
+
+  [closure] Async<void> disconnectDevice(/* No info */) async {
+    // ** addr: 0x7abfbc, size: 0x198
+    // Logic for disconnecting an A2DP device via SPPManager.
+    // 1. Clears existing device data (BleDeviceModel::clearData).
+    // 2. Clears local settings (LocalSetDataManager::clearDataWithUnbind).
+    // 3. If the type was BLE, it also calls BleManager::disconnectDevice().
+    // 4. Calls SPPManager::disconnectDevice().
+    // 5. Logs success or error with 'disconnectDevice error'.
+  }
+
+  _ getOtherDeviceMap(/* No info */) async {
+    // ** addr: 0x7dc42c, size: 0x128
+    // Logic for retrieving a map of other devices from SPPManager.
+  }
+
+  _ removeBond(/* No info */) async {
+    // ** addr: 0x87bfc8, size: 0x190
+    // Logic for unbonding/removing a device pairing via both SPPManager and BleManager.
+  }
+}
+
+// class id: 6783, size: 0x14, field offset: 0x14
+enum BleType extends _Enum {
+  _Mint field_8; // Represents 'Mint' or similar type (likely hardware-specific BLE profile).
+  _OneByteString field_10;
+}
+
+// Summary: A specialized manager acting as a bridge between BLE and SPP (Bluetooth Classic) protocols. It facilitates connection, scanning, and command dispatching for devices supporting both Bluetooth types (e.a., headsets/A2DP).

@@ -1,0 +1,31 @@
+// pseudo-code for spp_device_model.dart assembly
+
+// Class: SppDeviceModel
+// Purpose: A Data Transfer Object (DTO) representing a Bluetooth device discovered via the SPP protocol. 
+// It acts as a structured container for hardware metadata exchanged between native platform layers and Flutter.
+
+// Fields:
+// - name (String): The human-readable display name of the device.
+// - address (String): The unique MAC/Hardware address of the device.
+// - isPairing (String): A flag ("1" or "0") indicating if the device is currently in a pairing state.
+// - isHeadphone (String): A specialized identifier to categorize the device hardware type.
+
+// Function: address(SppDeviceModel)
+// Logic: Safe accessor for the late-initialized address field. 
+// Returns the device's MAC address string.
+
+// Function: toJson(SppDeviceModel)
+// Logic: Serializes the model instance into a Map format.
+// Utilizes generated code ($SppDeviceModelToJson) to convert all class fields into a JSON-compatible map for transport via MethodChannels.
+
+// Function: SppDeviceModel.fromJson(Map<String, dynamic>)
+// Logic: Deserializes a raw JSON map (received from native platform calls) back into a structured SppDeviceModel instance.
+// Uses generated logic ($SppDeviceModelFromJson) to reconstruct the object from keys like 'name', 'address', etc.
+
+// Function: isPairing(SppDeviceModel)
+// Logic: Returns a hardcoded default value ("0") representing the initial unverified pairing state of a newly discovered device.
+
+// Summary of file: spp_device_model.dart
+// This class defines the schema for SPP-capable Bluetooth devices. It is designed to be highly interoperable, 
+// allowing the native Android/iOS layers to pass complex device information as JSON payloads that the 
+// Flutter application can immediately consume and use for connection logic within the SPPManager.

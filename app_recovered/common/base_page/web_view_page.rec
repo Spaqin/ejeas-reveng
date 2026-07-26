@@ -1,0 +1,49 @@
+// Recovered Pseudocode for: ejeas_decompiled_flutter/common/base_page/web_view_page.dart
+
+class WebCodeViewPageState extends State<dynamic> {
+    late String webViewTitle;
+    late Future<String> _htmlContent;
+    late Map<String, dynamic> params;
+
+    // Replaces: _build()
+    Widget build(BuildContext context) {
+        // Initialized with link/data from context or parameters
+        return Container(child: null); 
+    }
+
+    // Replaces: _checkWebViewStatus()
+    async void checkWebViewStatus() {
+        try {
+            if (this.canGoBack()) {
+                await this.goBack();
+            }
+        } catch (e) {}
+    }
+
+    // Replaces: _inAppWebViewURLWidget()
+    async Widget inAppWebViewURLWidget() {
+        let url = await this.getHtmlFromParams(); // Logic for extracting URL from params
+        return InAppWebView(
+            initialUrlRequest: URLRequest(url: url),
+            onLoadStart: (controller, url) => console.log("Started loading " + url),
+            // ... other event handlers (onLoadStop, etc.)
+        );
+    }
+
+    // Replaces: _goRunJavaScript()
+    async void goRunJavaScript(String js) {
+        await this.controller.evaluateJavascript(code: js);
+    }
+}
+
+class WebTool {
+    static async void openUrlWebView(BuildContext context, String url, {bool isScrollEnable = false}) {
+        // Implementation for opening a web view with specific URL and scroll settings
+        // Uses PageRoute to navigate to WebCodeViewPage
+    }
+}
+
+/* 
+Role: Provides functionality to display web content (HTML/URL) within the app using InAppWebView, 
+      handling navigation between pages and executing raw JavaScript.
+*/

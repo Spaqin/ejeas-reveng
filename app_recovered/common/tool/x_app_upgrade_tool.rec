@@ -1,0 +1,61 @@
+// class id: 983, size: 0x30, field offset: 0x1c
+class AppUpgradeController extends GetxController {
+
+  _ resetStatus(/* No info */) {
+    // ** addr: 0x932908, size: 0x7c
+    // Resets all reactive upgrade state variables.
+    // 1. Resets progress (RxDouble) to 0.0.
+    // 2. Resets isUpdating (RxBool) to false.
+    // 3. Resets isDownloading (RxBool) to false.
+    // 4. Resets error message (RxString) to empty.
+    // 5. Clears the update history/log list.
+  }
+
+  _ AppUpgradeController(/* No info */) {
+    // ** addr: 0x932984, size: 0xf0
+    // Initializes the AppUpgradeController with reactive state.
+    // 1. Sets up reactive variables using GetX:
+    //    - progress (RxDouble) = 0.0
+    //    - isUpdating (RxBool) = false
+    //    - isDownloading (Rx0xBool) = false
+    //    - errorMsg (RxString) = ""
+    //    - currentVersion (RxString) = ""
+    //    - targetVersion (RxString) = ""
+    //    - downloadStatus (RxString) = ""
+    //    - retryCount (RxInt) = 0
+    //    - history (RxList) = []
+    // 2. Uses Dio for network requests during the update process.
+  }
+
+  _ cancelDownload(/* No info */) {
+    // ** addr: 0x932b14, size: 0x40
+    // Aborts the ongoing download process by setting isDownloading to false.
+  }
+
+  _ onInit(/* No info */) {
+    // ** addr: 0xaca61c, size: 0xa4
+    // Initializes the controller and sets up the Dio HTTP client for downloading update files.
+  }
+}
+
+// class id: 5061, size: 0x8, field offset: 0x8
+abstract class AppUpgradeTool extends Object {
+
+  static _ showVersionUpdateDialog(/* No info */) {
+    // ** addr: 0x931bc4, size: 0x770
+    // Displays a UI dialog to the user when a new version is detected.
+    // 1. Instantiates AppUpgradeController.
+    // 2. Resets the upgrade status.
+    // 3. Builds a visually styled dialog (using BoxDecoration, Spacers, etc.) 
+    //    containing:
+    //    - An icon (app_icon.png).
+    //    - A text message stating "A new version is available...".
+    //    - A version number text (dynamically interpolated).
+    //    - A "Update" button that triggers the `enterOTAUpdate` flow.
+    //    - An "Ignore" button that dismisses the dialog.
+  }
+}
+
+// Summary: Provides the high-level logic for checking, notifying, and managing the application upgrade process. 
+// It uses AppUpgradeController to manage the state of the download/update and 
+// AppUpgradeTool to present the user with update notifications and interaction buttons.

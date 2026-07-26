@@ -1,0 +1,22 @@
+// class id: 1011, size: 0x3c, field offset: 0x1c
+class SupBleManager extends GetXBaseController {
+
+  static late final SupBleManager _instance; // offset: 0x103c
+
+  _ connectSuccessSendMessage(/* No info */) async {
+    // ** addr: 0x798dac, size: 0x20c
+    // Handles post-connection logic for BLE (specifically for A2DP/Audio profiles).
+    // 1. Checks if the current BLE type is 'A2DP'.
+    // 2. If so, attempts to initiate 'connectA2dp' via SPPManager.
+    // 3. Uses BleMsgTool to send various functional messages (e.
+    //    g., 'sendGetDeviceSNMessage', 'sendGetDeviceTypeMessage') 
+    //    to the connected device to retrieve hardware information.
+    // 4. Implements a sequence of asynchronous delays to ensure the 
+    //    device is ready to process subsequent commands.
+  }
+}
+
+// Summary: Manages the high-level Bluetooth lifecycle for audio-centric (A2DP) 
+// devices. It orchestrates the connection-success workflow, specifically 
+// triggering the retrieval of device-specific metadata (SN, Type) via 
+// structured Bluetooth messaging commands immediately after a successful connection.

@@ -1,0 +1,19 @@
+// class id: 5141, size: 0x8, field offset: 0x8
+abstract class AgoraNetwork extends Object {
+
+  static _ generateAgoraTokenV1(/* No info */) async {
+    // ** addr: 0x86f890, size: 0x3c0
+    // Logic for generating a temporary Agora token for secure communication.
+    // 1. Retrieves 'channelName' and 'device_language'.
+    // 2. Fetches system language via LangManager::getSystemLang().
+    // 3. Reconstructs device context including:
+    //    - channelName (from parameters)
+    //    - device_language (system lang)
+    //    - deviceCode (via XGlobalsTool::getDeviceCode)
+    // 4. Calls NetworkManagerV1::generateAgoraToken() with the constructed map.
+    // 5. Logs result ('get token = ...') using XLog::agora.
+    // 6. Error handling: Returns "-1" or "-2" on failure, logging error via XLog::e.
+  }
+}
+
+// Summary: Provides networking utilities for Agora RTC services, specifically handling secure token generation by aggregating device-specific context (language and hardware ID).

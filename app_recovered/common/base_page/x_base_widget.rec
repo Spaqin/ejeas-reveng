@@ -1,0 +1,31 @@
+// class id: 1048801, size: 0x8
+class :: {
+
+  static _ sizeBoxHeight(/* No info */) {
+    // ** addr: 0x81e64c, size: 0x60
+    // Logic: Creates a SizedBox with height from an incoming double value.
+    // Returns: SizedBox
+  }
+
+  static _ iconButtonWidth(/* No info */) {
+    // ** addr: 0x846a34, size: 0x170
+    // Logic: Constructs an IconButton using an asset image and wraps it in a SizedBox.
+    // Uses Image.asset with some padding calculations from field_0.
+    // Returns: IconButton
+  }
+
+  static _ sizeBoxWidth(/* No info */) {
+    // ** addr: 0x848ab4, size: 0x60
+    // Logic: Creates a SizedBox with width from an incoming double value.
+    // Returns: SizedBox
+  }
+
+  static _ iconButtonWidthV2(/* No info */) {
+    // ** addr: 0xaff768, size: 0x140
+    // Logic: Constructs an IconButton with opacity and padding.
+    // Uses Image.asset and wraps it in a SizedBox.
+    // Returns: IconButton
+  }
+}
+
+// Summary: A utility class providing static methods to generate common Flutter widgets (SizedBox, IconButton) with specific dimensions and styling for use across the app.

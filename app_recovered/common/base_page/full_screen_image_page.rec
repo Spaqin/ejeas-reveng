@@ -1,0 +1,42 @@
+// Recovered Pseudocode for: ejeas_decompiled_flutter/common/base_page/full_screen_image_page.dart
+
+class FullScreenImagePage extends StatelessWidget {
+    // Replaces: [closure] Container(...)
+    Widget buildContainer(dynamic context, Object? match) {
+        return Container(
+            child: null, // Contains logic for displaying image in container
+            color: Colors.transparent, 
+        );
+    }
+
+    // Replaces: [closure] Widget(...)
+    Widget buildImageFromPath(dynamic context, AsyncSnapshot<String> snapshot) {
+        if (snapshot.connectionState == ConnectionState.done) {
+            if (snapshot.data != null && snapshot.data!.startsWith("http")) {
+                return Container(
+                    child: NetworkImage(snapshot.data!),
+                    color: Colors.transparent,
+                );
+            } else if (snapshot.data != null) {
+                String path = snapshot.data!;
+                return FileImage(File(path));
+            }
+        }
+        // Loading or error state logic from assembly...
+        return Center(child: CircularProgressIndicator());
+    }
+
+    // Replaces: _getImageProvider()
+    async String _getImageProvider() {
+        try {
+            String path = await getLocalFilePath();
+            return path;
+        } catch (e) {
+            return "";
+        }
+    }
+}
+
+/* 
+Role: Displays images in full-screen mode, supporting both network URLs and local file paths.
+*/

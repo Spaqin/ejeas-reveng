@@ -1,0 +1,46 @@
+// class id: 5073, size: 0x28, field offset: 0x8
+class SocketManager extends Object {
+
+  static late final SocketManager _instance; // offset: 0x1328
+
+  _ sendMessage(/* No info */) {
+    // ** addr: 0x7a43a0, size: 0x150
+    // Sends a message over the socket channel.
+    // 1. Prepares payload with language information via LangManager.
+    // 2. Logs transmission using XLog::socket.
+    // 3. Uses SocketTxTool::sendPing/sendLoginStatus to dispatch data.
+  }
+
+  _ disconnect(/* No info */) {
+    // ** addr: 0x7abf38, size: 0x84
+    // Closes the active WebSocket connection and cancels any pending reconnection timers.
+  }
+
+  _ connect(/* No info */) {
+    // ** addr: 0x91fcd0, size: 0x144
+    // Establates a new WebSocket connection to 'wsSocketURL'.
+    // 1. Initializes websocket channel via IOWebSocketChannel.connect.
+    // 2. Attaches stream listeners for data reception, error handling, and completion.
+    // 3. Triggers an initial ping/login signal via SocketTxTool.
+  }
+
+  _ _reconnect(/* No info */) {
+    // ** addr: 0x91fe14, size: 0x78
+    // Logic for handling automatic reconnection attempts after connection loss.
+    // Disconnects current channel and schedules a retry using Future.delayed.
+  }
+
+  [closure] void _onDataReceived(dynamic, dynamic) {
+    // ** addr: 0x924650, size: 0x3c
+    // Callback triggered when new data is received on the WebSocket stream.
+    // Routes incoming bytes to SocketRxTool::processReceivedData for protocol parsing.
+  }
+
+  [closure] void _onError(dynamic, dynamic) {
+    // ** addr: 0x924590, size: 0x3c
+    // Callback triggered on WebSocket error/disconnection event.
+    // Logs the error and attempts a reconnection procedure.
+  }
+}
+
+// Summary: Manage real-time bi-directional communication over WebSockets (WSS). It handles connection lifecycle, automated reconnection logic, stream listening, and integrates with SocketTxTool for dispatching protocol-specific commands like 'ping' or presence/login status updates.
